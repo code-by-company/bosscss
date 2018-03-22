@@ -22,7 +22,6 @@ input[type="checkbox"], input[type="radio"] {
   }
   
   &:after {
-    
     display: block;
     width: $input-size;
     height: $input-size;
@@ -55,7 +54,7 @@ input[type="checkbox"] {
   
   &:after {
     border-radius: 2px;
-    background-color: #fff;
+    background-color: transparent;
     z-index: 999;
   }
   
@@ -107,6 +106,7 @@ input[type="radio"] {
     }
     &:after {
       border-color: $primary-background-color-medium;
+      background-color: transparent;
     }
     
     &:disabled{

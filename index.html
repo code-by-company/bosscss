@@ -1,30 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BOSSCSS - The Backup CSS Framework You Need</title>
-    <link rel="stylesheet" type="text/css" href="development/_css/boss.css">
+    <link href="development/_css/boss.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .intro {
+            text-align: center;
+            background: #f2f2f2;
+            padding: 20px 0;
+        }
+        
+        .main-tabs {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="section section-hero bcwm">
-        <div id="overview" class="grid-hero tc">
-            <h1>BOSS.CSS</h1>
-            <h2>the only Backup CSS Framework you need</h2>
-            <p>
-                <a href="https://bitbucket.org/freador/bosscss-framework" target="_blank" class="pl2 pr2 pt1 pb1 bcsb tcwl dib fs5">Bitbucket</a>
-            </p>
-            <p class="tcwd fs5">Latest version:
-                <span class="version">0.1.0</span>
-            </p>
-            <p>
-                <input type="checkbox">
-            </p>
-            <p>
-                <input type="radio">
-            </p>
+
+    <section class="intro">
+        <h1>BOSS.CSS</h1>
+        <h2>the only Backup CSS Framework you need</h2>
+        <p>
+            <a href="https://bitbucket.org/freador/bosscss-framework" target="_blank" class="pl2 pr2 pt1 pb1 bcsb tcwl dib fs5">Bitbucket</a>
+        </p>
+        <p class="tcwd fs5">Latest version:
+            <span class="version">0.1.0</span>
+        </p>
+    </section>
+
+    <section class="main">
+        <div class="container">
+            <div class="columns">
+                <aside class="col-4 nav-tabs">
+                    <ul>
+                        <li><a href="#border" rel="border">border</a></li>
+                        <li><a href="#colors" rel="colors">colors</a></li>
+                        <li><a href="#elevations" rel="elevations">elevations</a></li>
+                        <li><a href="#grid" rel="grid">grid</a></li>
+                        <li><a href="#input" rel="input">input</a></li>
+                        <li><a href="#layout" rel="layout">layout</a></li>
+                        <li><a href="#lists" rel="lists">lists</a></li>
+                        <li><a href="#margin" rel="margin">margin</a></li>
+                        <li><a href="#overflow" rel="overflow">overflow</a></li>
+                        <li><a href="#padding" rel="padding">padding</a></li>
+                        <li><a href="#reset" rel="reset">reset</a></li>
+                        <li><a href="#rotate" rel="rotate">rotate</a></li>
+                        <li><a href="#typography" rel="typography">typography</a></li>
+                        <li><a href="#z-index" rel="z-index">z-index</a></li>
+                    </ul>
+                </aside>
+                <main class="col-8">
+                    <article id="border" class="main-tabs" style="display:block;">
+                        <h1>border</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="colors" class="main-tabs">
+                        <h1>colors</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="elevations" class="main-tabs">
+                        <h1>elevations</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="grid" class="main-tabs">
+                        <h1>grid</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="input" class="main-tabs">
+                        <h1>input</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="layout" class="main-tabs">
+                        <h1>layout</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="lists" class="main-tabs">
+                        <h1>lists</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="margin" class="main-tabs">
+                        <h1>margin</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="overflow" class="main-tabs">
+                        <h1>overflow</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="padding" class="main-tabs">
+                        <h1>padding</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="reset" class="main-tabs">
+                        <h1>reset</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="rotate" class="main-tabs">
+                        <h1>rotate</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="typography" class="main-tabs">
+                        <h1>typography</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+
+                    <article id="z-index" class="main-tabs">
+                        <h1>z-index</h1>
+                        <div class="content">
+
+                        </div>
+                    </article>
+                </main>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //  When user clicks on tab, this code will be executed
+            $(".nav-tabs li").click(function() {
+                //  First remove class "active" from currently active tab
+                $(".nav-tabs li").removeClass('active');
+
+                //  Now add class "active" to the selected/clicked tab
+                $(this).addClass("active");
+
+                //  Hide all tab content
+                $(".main-tabs").hide();
+
+                //  Here we get the href value of the selected tab
+                var selected_tab = $(this).find("a").attr("href");
+
+                //  Show the selected tab content
+                $(selected_tab).fadeIn();
+
+                //  At the end, we add return false so that the click on the link is not executed
+                return false;
+            });
+
+        });
+    </script>
+
 </body>
+
 </html>
