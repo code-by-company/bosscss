@@ -2,11 +2,11 @@
 
 /*     
  *      
- *      
- *      _____________________
- *      /  __ \ /  ___/ /  ___/
- *      / /_/ /(__  ) (__  )
- *      \____//____/ /____/
+ *         __
+ *        / /_    ____    ______  ______
+ *       / __ \  / __ \  /  ___/ /  ___/
+ *      / /_/ / / /_/ / (__   ) (__   )
+ *      \____/  \____/ /___ _/ /____ /
  *
  *
  *    TABLE OF CONTENTS
@@ -15,6 +15,7 @@
  *       - theme
  *       - reset
  *       - elevations
+ *       - rotate
  *       - layout
  *       - lists
  *       - margin
@@ -28,6 +29,7 @@
 @import '_sass/theme.scss';
 @import '_sass/reset.scss';
 @import '_sass/elevations.scss';
+@import '_sass/rotate.scss';
 @import '_sass/layout.scss';
 @import '_sass/lists.scss';
 @import '_sass/margin.scss';
