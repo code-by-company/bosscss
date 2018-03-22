@@ -9,7 +9,7 @@
 *,
 *:after,
 *:before {
-  @include box-sizing(border-box);
+  @include box-sizing(inherit);
 }
 
 html {

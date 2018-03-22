@@ -1,0 +1,133 @@
+$primary-background-color-medium: #ff5d5d;
+$input-size: 18px;
+
+// end demo
+input[type="checkbox"], input[type="radio"] {
+  width: $input-size;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  border-radius: 50%;
+  
+  &:focus{
+    animation: press .8s 1;  
+  }
+  
+  &:before, &:after {
+    content: "";
+  }
+  
+  &:after {
+    
+    display: block;
+    width: $input-size;
+    height: $input-size;
+    margin-top: -2px;
+    margin-right: 5px;
+    border: 2px solid #666;
+    transition: 240ms;
+  }
+  
+  &:disabled {
+    &:after {
+      border-color: #ddd;
+      background-color: #eee;
+      cursor: not-allowed;
+    }
+    
+    &:checked {
+      &:after {
+        background-color: #eee;
+        border-color: #ddd;
+      }
+      
+      &:before {
+        border-color: #999;
+      }
+    }
+  }
+}
+input[type="checkbox"] {
+  
+  &:after {
+    border-radius: 2px;
+    background-color: #fff;
+    z-index: 999;
+  }
+  
+  &:checked{
+    &:after {
+      background-color: $primary-background-color-medium;
+      border-color: $primary-background-color-medium;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 6px;
+      display: table;
+      width: 6px;
+      height: 12px;
+      border: 2px solid #fff;
+      border-top-width: 0;
+      border-left-width: 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+input[type="radio"] {
+
+   &:before{
+     position: absolute;
+     left: 0;
+     top: 0;
+     background-color: $primary-background-color-medium;
+     width: $input-size;
+     height: $input-size;
+
+     display: block;
+     margin-top: -2px;
+     border-radius: 50%;
+     transition: 240ms;
+     transform: scale(0);
+   }
+  
+   &:after {
+    border-radius: 50%;
+  }
+  
+  &:checked{
+    &:before {
+        transform: scale(.5);   
+    }
+    &:after {
+      border-color: $primary-background-color-medium;
+    }
+    
+    &:disabled{
+      &:before{
+        background-color: #ccc;
+      }
+    }
+  }
+}
+
+
+@keyframes press {
+  0% {
+    box-shadow: 0 0 0 0 lighten($primary-background-color-medium, 10%);
+  }
+  
+  50% {
+     box-shadow: 0 0 0 15px rgba( lighten($primary-background-color-medium, 10%) , .4 ); 
+  }
+  
+  100% {
+    box-shadow: 0 0 0 15px rgba( lighten($primary-background-color-medium, 10%) , 0 ); 
+  }
+}
