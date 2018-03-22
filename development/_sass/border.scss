@@ -1,0 +1,25 @@
+$spaceamounts: ( 0, 2, 4, 6, 8, 10, 12, 16, 18, 20 );
+
+$sides: ( radius );
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .b#{str-slice($side, 0, 2)}#{$space} {
+      border-#{$side}: #{$space}px;
+    }
+  }
+}
+
+
+
+$spaceamounts: ( 0, 5, 10, 15, 20, 25, 30, 40, 45, 50 );
+
+$sides: ( radius );
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .bp#{str-slice($side, 0, 2)}#{$space} {
+        border-#{$side}: percentage($number: $space / 100 ) ;
+    }
+  }
+}

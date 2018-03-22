@@ -1,16 +1,17 @@
 /* reset */
 
-* {
- -webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
- box-sizing: border-box;
- &:before,
- &:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
- }
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model;
+       -moz-box-sizing: $box-model;
+            box-sizing: $box-model;
+  }
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
 }
+
 html {
  line-height: 1.15;
  -webkit-text-size-adjust: 100%;
