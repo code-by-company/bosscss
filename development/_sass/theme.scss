@@ -1,0 +1,113 @@
+/* background color variables */
+
+$primary-background-color-light: #ffacac;
+$primary-background-color-medium: #ff5d5d;
+$primary-background-color-dark: #c70000;
+
+$secondary-background-color-light: #d8ffd3;
+$secondary-background-color-medium: #6dff57;
+$secondary-background-color-dark: #19bf00;
+
+$white-background-color-light: #ffffff;
+$white-background-color-medium: #e0e0e0;
+$white-background-color-dark: #b5b5b5;
+
+$black-background-color-light: #666666;
+$black-background-color-medium: #383838;
+$black-background-color-dark: #070606;
+
+/* text color variables */
+
+$primary-text-color-light: #ffacac;
+$primary-text-color-medium: #ff5d5d;
+$primary-text-color-dark: #c70000;
+
+$secondary-text-color-light: #d8ffd3;
+$secondary-text-color-medium: #6dff57;
+$secondary-text-color-dark: #19bf00;
+
+$white-text-color-light: #ffffff;
+$white-text-color-medium: #e0e0e0;
+$white-text-color-dark: #b5b5b5;
+
+$black-text-color-light: #666666;
+$black-text-color-medium: #383838;
+$black-text-color-dark: #070606;
+
+/* background colors */
+
+.bcpl {
+ color: $primary-background-color-light;
+}
+.bcpm {
+ color: $primary-background-color-medium;
+}
+.bcpb {
+ color: $primary-background-color-dark;
+}
+.bcsl {
+ color: $secondary-background-color-light;
+}
+.bcsm {
+ color: $secondary-background-color-medium;
+}
+.bcsb {
+ color: $secondary-background-color-dark;
+}
+.bcwl {
+ color: $white-background-color-light;
+}
+.bcwm {
+ color: $white-background-color-medium;
+}
+.bcwd {
+ color: $white-background-color-dark;
+}
+.bcbl {
+ color: $white-background-color-light;
+}
+.bcbm {
+ color: $white-background-color-medium;
+}
+.bcbd {
+ color: $white-background-color-dark;
+}
+
+/* text colors */
+
+.tcpl {
+ color: $primary-text-color-light;
+}
+.tcpm {
+ color: $primary-text-color-medium;
+}
+.tcpb {
+ color: $primary-text-color-dark;
+}
+.tcsl {
+ color: $secondary-text-color-light;
+}
+.tcsm {
+ color: $secondary-text-color-medium;
+}
+.tcsb {
+ color: $secondary-text-color-dark;
+}
+.tcwl {
+ color: $white-text-color-light;
+}
+.tcwm {
+ color: $white-text-color-medium;
+}
+.tcwd {
+ color: $white-text-color-dark;
+}
+.tcbl {
+ color: $white-text-color-light;
+}
+.tcbm {
+ color: $white-text-color-medium;
+}
+.tcbd {
+ color: $white-text-color-dark;
+}
