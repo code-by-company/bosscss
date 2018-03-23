@@ -1,5 +1,5 @@
-# Boss CSS Framework #
+# BOSSCSS Framework #
 
-The backup CSS Framework you need.
+The only minimalist lightweight Framework you need
 
-based on structure
+when every millisecond are crucial ! say heloo to BOSSCSS

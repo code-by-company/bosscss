@@ -1,482 +1,877 @@
-// Layout
+/*
 
-// Unit sizes
-$unit-o: .05rem !default;
-$unit-h: .1rem !default;
-$unit-1: .2rem !default;
-$unit-2: .4rem !default;
-$unit-3: .6rem !default;
-$unit-4: .8rem !default;
-$unit-5: 1rem !default;
-$unit-6: 1.2rem !default;
-$unit-7: 1.4rem !default;
-$unit-8: 1.6rem !default;
-$unit-9: 1.8rem !default;
-$unit-10: 2rem !default;
-$unit-12: 2.4rem !default;
-$unit-16: 3.2rem !default;
 
-// Font sizes
-$html-font-size: 20px !default;
-$html-line-height: 1.5 !default;
-$font-size: .8rem !default;
-$font-size-sm: .7rem !default;
-$font-size-lg: .9rem !default;
-$line-height: 1rem !default;
+// --------------------------------------------------
+// class minification   (thinking ... )
+// --------------------------------------------------
 
-// Sizes
-$layout-spacing: $unit-2 !default;
-$layout-spacing-sm: $unit-1 !default;
-$layout-spacing-lg: $unit-4 !default;
-$border-radius: $unit-h !default;
-$border-width: $unit-o !default;
-$border-width-lg: $unit-h !default;
-$control-size: $unit-9 !default;
-$control-size-sm: $unit-7 !default;
-$control-size-lg: $unit-10 !default;
-$control-padding-x: $unit-2 !default;
-$control-padding-x-sm: $unit-2 * .75 !default;
-$control-padding-x-lg: $unit-2 * 1.5 !default;
-$control-padding-y: ($control-size - $line-height) / 2 - $border-width !default;
-$control-padding-y-sm: ($control-size-sm - $line-height) / 2 - $border-width !default;
-$control-padding-y-lg: ($control-size-lg - $line-height) / 2 - $border-width !default;
-$control-icon-size: .8rem !default;
 
-$control-width-xs: 180px !default;
-$control-width-sm: 320px !default;
-$control-width-md: 640px !default;
-$control-width-lg: 960px !default;
-$control-width-xl: 1280px !default;
+grid                                   grd
+container                              ctnr
+order                                  ordr
+wrap-reverse                           wrp-rev
+direction-row                          dir-row
+direction-row-reverse                  dir-row-rev
+direction-column                       dir-clmn
+direction-column-reverse               dir-clmn-rev
+align-start                            alg-stt
+align-end                              alg-end
+align-center                           alg-ctr
+align-baseline                         alg-bsln
+align-content-start                    alg-ct-stt
+align-content-end                      alg-ct-end
+align-content-center                   alg-ct-ctr
+align-content-space-between            alg-ct-spc-btwn
+align-content-space-around             alg-ct-spc-ard
+align-self-stretch                     alg-sf-stch
+align-self-start                       alg-sf-stt
+align-self-end                         alg-sf-end
+align-self-center                      alg-sf-ctr
+align-self-baseline                    alg-sf-bsln
+justify-start                          jst-stt
+justify-end                            jst-end
+justify-center                         jst-ctr
+justify-space-between                  jst-spc-btwn
+justify-space-around                   jst-spc-ard
+grid-bleed                             grd-bld
+hidden-lg                              hidden-lg
+hidden-md                              hid-md
+hidden-sm                              hid-sm
+hidden-xs                              hid-xs
+hidden-xxs                             hid-xxs
+flex-footer                            flx-ftr
+col-bleed                              col-bld
+col-bleed-x                            col-bld-x
+col-bleed-y                            col-bld-y
 
-// Responsive breakpoints
-$size-xs: 480px !default;
-$size-sm: 600px !default;
-$size-md: 840px !default;
-$size-lg: 960px !default;
-$size-xl: 1280px !default;
-$size-2x: 1440px !default;
+*/ 
 
-$responsive-breakpoint: $size-xs !default;
 
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $layout-spacing;
-    padding-right: $layout-spacing;
-    width: 100%;
-  
-    $grid-spacing: ($layout-spacing / ($layout-spacing * 0 + 1)) * $html-font-size;
-  
-    &.grid-xl {
-      max-width: $grid-spacing * 2 + $size-xl;
-    }
-  
-    &.grid-lg {
-      max-width: $grid-spacing * 2 + $size-lg;
-    }
-  
-    &.grid-md {
-      max-width: $grid-spacing * 2 + $size-md;
-    }
-  
-    &.grid-sm {
-      max-width: $grid-spacing * 2 + $size-sm;
-    }
-  
-    &.grid-xs {
-      max-width: $grid-spacing * 2 + $size-xs;
-    }
-  }
-  
-  // Responsive breakpoint system
-  .show-xs,
-  .show-sm,
-  .show-md,
-  .show-lg,
-  .show-xl {
-    display: none !important;
-  }
-  
-  // Responsive grid system
-  .columns {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -$layout-spacing;
-    margin-right: -$layout-spacing;
-  
-    &.col-gapless {
-      margin-left: 0;
-      margin-right: 0;
-  
-      & > .column {
-        padding-left: 0;
-        padding-right: 0;
+
+
+// --------------------------------------------------
+// reflex variables
+// --------------------------------------------------
+
+// Prefix
+// -------------------------
+// You can optionally namespace reflex classes to avoid clashing with other css frameworks
+// e.g. setting $reflex-prefix as "reflex-" here would cause col-sm-6 to become reflex-col-sm-6
+// Example: $reflex-prefix: reflex-;
+// By default this is an empty string
+$reflex-prefix: null !default;
+
+
+// Legacy support
+// -------------------------
+// Reflex adds a lot of css propertie to support older browsers that don't support flexbox layout.
+// If you prefer to use this as a purely flexbox grid without legacy support then set this to false
+$legacy-support: true !default;
+
+// Responsive visibility helpers
+// -------------------------
+// Reflex has some generic visibility classes to hide elements at different breakpoints.
+// If you want to disable these then set this to false
+$visibility-helpers: true !default;
+
+// Grid
+// -------------------------
+$reflex-columns: 12 !default; // number of columns
+
+// Breakpoints
+// -------------------------
+$reflex-xs: 576px !default;
+$reflex-sm: 768px !default;
+$reflex-md: 992px !default;
+$reflex-lg: 1200px !default;
+$reflex-xlg: 1600px !default;
+
+$reflex-xxs-max:    ($reflex-xs - 1);
+$reflex-xs-max:     ($reflex-sm - 1);
+$reflex-sm-max:     ($reflex-md - 1);
+$reflex-md-max:     ($reflex-lg - 1);
+$reflex-lg-max:     ($reflex-xlg - 1);
+
+// Spacing
+// -------------------------
+$reflex-grid-spacing:       15px !default;
+
+// --------------------------------------------------
+// reflex mixins
+// --------------------------------------------------
+//
+// --------------------------------------------------
+// reflex grid generation mixins
+// --------------------------------------------------
+
+@mixin make-reflex-grid($class) {
+  @include loop-reflex-columns($reflex-columns, $class, width);
+}
+
+@mixin calc-reflex-columns($index, $class, $type) {
+  @if $type == width and $index > 0 {
+      .#{$reflex-prefix}#{$class}#{$index} {
+          width: percentage(($index / $reflex-columns));
+          *width: percentage(($index / $reflex-columns)) - .1; // ie7 css hack
       }
-    }
-    &.col-oneline {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-    }
   }
-  .column {
-    flex: 1;
-    max-width: 100%;
-    padding-left: $layout-spacing;
-    padding-right: $layout-spacing;
-  
-    &.col-12,
-    &.col-11,
-    &.col-10,
-    &.col-9,
-    &.col-8,
-    &.col-7,
-    &.col-6,
-    &.col-5,
-    &.col-4,
-    &.col-3,
-    &.col-2,
-    &.col-1 {
-      flex: none;
-    }
+}
+
+@mixin loop-reflex-columns($index, $class, $type) {
+  @if $index >= 0 {
+      @include calc-reflex-columns($index, $class, $type);
+      // next iteration
+      @include loop-reflex-columns(($index - 1), $class, $type);
   }
-  .col-12 {
+}
+
+// defaults for auto cols
+@mixin setup-auto-cols() {
+  @include flex(1, 0, 0px); // a unit on last value is required by IE10-11
+
+  @if $legacy-support == true {
+      width: auto;
+  }
+}
+
+// --------------------------------------------------
+// inline-block specific mixins
+// --------------------------------------------------
+
+@mixin setup-whitespace() {
+  @if $legacy-support == true {
+      letter-spacing: -.31em;
+      *letter-spacing: normal;
+      word-spacing: -.43em;
+  }
+}
+
+@mixin reset-whitespace() {
+  @if $legacy-support == true {
+      letter-spacing: normal;
+      word-spacing: normal;
+      white-space: normal;
+  }
+}
+
+@mixin reset-text-align() {
+  //
+  // We want to reset any text-align properties set by the grid
+  // (required for the inline-block fallback)
+  // but we don't want to override any text-align properties
+  // set on the individual col-x element
+  // or on any of it's child elements
+  //
+  // 1) set to left by default (works everywhere)
+  // 2) set to start (respects right to left text)
+  //
+  text-align: left;
+  text-align: start;
+  -moz-text-align-last: left;
+  -moz-text-align-last: start;
+  text-align-last: left;
+  text-align-last: start;
+}
+
+// --------------------------------------------------
+// order class generation mixins
+// --------------------------------------------------
+
+@mixin order($order: 0) {
+  -ms-flex-order: $order;
+  -webkit-order: $order;
+  order: $order;
+}
+
+@mixin make-order-helpers() {
+  @include loop-order-helpers($reflex-columns);
+}
+
+@mixin loop-order-helpers($index, $breakpoint: null) {
+  @if $index >= 0 {
+      .#{$reflex-prefix}order-#{$index}#{$breakpoint} {
+          @include order($index);
+      }
+      // next iteration
+      @include loop-order-helpers(($index - 1), $breakpoint);
+  }
+}
+
+// --------------------------------------------------
+// reflex modifier mixins
+// --------------------------------------------------
+
+//
+// display
+// ---
+
+@mixin display-flex() {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+//
+// flex
+// ---
+
+@mixin flex($grow: 0, $shrink: 1, $basis: auto) {
+  @if $basis == 0 {
+      -ms-flex: $grow $shrink auto; //ie10 needs auto
+  } @else {
+      -ms-flex: $grow $shrink $basis;
+  }
+
+  -webkit-flex: $grow $shrink $basis;
+  flex: $grow $shrink $basis;
+}
+
+@mixin flex-grow($grow:1) {
+  -ms-flex-positive: $grow;
+  -webkit-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+@mixin flex-shrink($shrink:1) {
+  -ms-flex-negative: $shrink;
+  -webkit-flex-shrink: $shrink;
+  flex-shrink: $shrink;
+}
+
+@mixin flex-basis($basis:auto) {
+  -ms-flex-preferred-size: $basis;
+  -webkit-flex-basis: $basis;
+  flex-basis: $basis;
+}
+
+@mixin flex-flow($direction: row, $wrap: nowrap) {
+  -ms-flex-wrap: $wrap;
+  -ms-flex-direction: $direction;
+  -webkit-flex-flow: $direction $wrap;
+  flex-flow: $direction $wrap;
+}
+
+@mixin flex-wrap($wrap: wrap) {
+  -ms-flex-wrap: $wrap;
+  -webkit-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-direction($direction: row) {
+  -ms-flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+//
+// align
+// ---
+
+@mixin align-items($align: stretch) {
+  @include ms-align-items($align);
+  -webkit-align-items: $align;
+  align-items: $align;
+}
+
+@mixin align-self($align: stretch) {
+  @include ms-align-self($align);
+  -webkit-align-self: $align;
+  align-self: $align;
+}
+
+@mixin align-content($align: stretch) {
+  @include ms-align-content($align);
+  -webkit-align-content: $align;
+  align-content: $align;
+}
+
+//
+// ie10 syntax for align
+// ---
+
+@mixin ms-align-items($align) {
+  @if $align == 'flex-start' {
+      -ms-flex-align: start;
+  } @else if $align == 'flex-end' {
+      -ms-flex-align: end;
+  } @else {
+      -ms-flex-align: $align;
+  }
+}
+
+@mixin ms-align-self($align) {
+  @if $align == 'flex-start' {
+      -ms-flex-item-align: start;
+  } @else if $align == 'flex-end' {
+      -ms-flex-item-align: end;
+  } @else {
+      -ms-flex-item-align: $align;
+  }
+}
+
+@mixin ms-align-content($align) {
+  @if $align == 'flex-start' {
+      -ms-flex-line-pack: start;
+  } @else if $align == 'flex-end' {
+      -ms-flex-line-pack: end;
+  } @else if $align == 'space-between' {
+      -ms-flex-line-pack: justify;
+  } @else if $align == 'space-around' {
+      -ms-flex-line-pack: distribute;
+  } @else {
+      -ms-flex-line-pack: $align;
+  }
+}
+
+//
+// justify-content
+//
+// Uses "text-align" for the fallback inline-block grid
+// "text-align" is globally supported and works on all rows except the last
+// "text-align-last", where supported, handles the last line (and, happily, grids with only one row)
+// ---
+
+@mixin justify-content-start() {
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+@mixin justify-content-end() {
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+@mixin justify-content-center() {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@mixin justify-content-space-between() {
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+@mixin justify-content-space-around() {
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+// --------------------------------------------------
+// other mixins
+// --------------------------------------------------
+
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
+
+@mixin responsive-visibility-helpers() {
+  @if $visibility-helpers == true {
+      .#{$reflex-prefix}hidden-xxs {
+          @media (max-width: $reflex-xxs-max) {
+              display: none;
+          }
+      }
+
+      .#{$reflex-prefix}hidden-xs {
+          @media (min-width: $reflex-xs) and (max-width: $reflex-xs-max) {
+              display: none;
+          }
+      }
+
+      .#{$reflex-prefix}hidden-sm {
+          @media (min-width: $reflex-sm) and (max-width: $reflex-sm-max) {
+              display: none;
+          }
+      }
+
+      .#{$reflex-prefix}hidden-md {
+          @media (min-width: $reflex-md) and (max-width: $reflex-md-max) {
+              display: none;
+          }
+      }
+
+      .#{$reflex-prefix}hidden-lg {
+          @media (min-width: $reflex-lg) {
+              display: none;
+          }
+      }
+  }
+}
+
+// --------------------------------------------------
+// reflex containers
+// --------------------------------------------------
+
+.#{$reflex-prefix}container,
+.#{$reflex-prefix}container-full {
+    @include box-sizing(border-box);
     width: 100%;
-  }
-  .col-11 {
-    width: 91.66666667%;
-  }
-  .col-10 {
-    width: 83.33333333%;
-  }
-  .col-9 {
-    width: 75%;
-  }
-  .col-8 {
-    width: 66.66666667%;
-  }
-  .col-7 {
-    width: 58.33333333%;
-  }
-  .col-6 {
-    width: 50%;
-  }
-  .col-5 {
-    width: 41.66666667%;
-  }
-  .col-4 {
-    width: 33.33333333%;
-  }
-  .col-3 {
-    width: 25%;
-  }
-  .col-2 {
-    width: 16.66666667%;
-  }
-  .col-1 {
-    width: 8.33333333%;
-  }
-  .col-auto {
-    flex: 0 0 auto;
-    max-width: none;
-    width: auto;
-  }
-  .col-mx-auto {
-    margin-left: auto;
     margin-right: auto;
-  }
-  .col-ml-auto {
     margin-left: auto;
+    padding-right: ($reflex-grid-spacing * 2);
+    padding-left: ($reflex-grid-spacing * 2);
+
+    .#{$reflex-prefix}grid {
+        margin-right: -$reflex-grid-spacing;
+        margin-left: -$reflex-grid-spacing;
+    }
+}
+
+.#{$reflex-prefix}container {
+    @media (min-width: $reflex-xs) {
+        max-width: $reflex-xs;
+    }
+
+    @media (min-width: $reflex-sm) {
+        max-width: $reflex-sm;
+    }
+
+    @media (min-width: $reflex-md) {
+        max-width: $reflex-md;
+    }
+
+    @media (min-width: $reflex-lg) {
+        max-width: $reflex-lg;
+    }
+
+    @media (min-width: $reflex-xlg) {
+        max-width: $reflex-xlg;
+    }
+}
+
+// --------------------------------------------------
+// reflex grid
+// --------------------------------------------------
+
+.#{$reflex-prefix}grid {
+    @include box-sizing(border-box);
+    display: block;
+    @include display-flex();
+    @include flex-wrap();
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    @include setup-whitespace();
+
+    &::before,
+    &::after {
+        @include box-sizing(border-box);
+        @include reset-whitespace();
+    }
+
+    // handle when lists are used as a grid
+    list-style-type: none;
+}
+
+// --------------------------------------------------
+// reflex col defaults
+// --------------------------------------------------
+
+[class^="#{$reflex-prefix}col-"] {
+    @include box-sizing(border-box);
+    @include reset-whitespace();
+    position: relative;
+    width: 100%;
+    vertical-align: top;
+    padding: $reflex-grid-spacing;
+
+    &::before,
+    &::after {
+        @include box-sizing(border-box);
+        @include reset-whitespace();
+    }
+
+    // handle grids nested in columns
+    .#{$reflex-prefix}grid {
+        @include flex(1, 1, auto);
+        margin: -$reflex-grid-spacing;
+    }
+
+    @if $legacy-support == true {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+    }
+}
+
+// --------------------------------------------------
+// reflex grid generation
+// --------------------------------------------------
+
+@include make-reflex-grid(col-);
+
+@media (min-width: $reflex-xs) {
+    @include make-reflex-grid(col-xs-);
+}
+
+@media (min-width: $reflex-sm) {
+    @include make-reflex-grid(col-sm-);
+}
+
+@media (min-width: $reflex-md) {
+    @include make-reflex-grid(col-md-);
+}
+
+@media (min-width: $reflex-lg) {
+    @include make-reflex-grid(col-lg-);
+}
+
+@media (min-width: $reflex-xlg) {
+    @include make-reflex-grid(col-xlg-);
+}
+
+// --------------------------------------------------
+// reflex col-auto
+// --------------------------------------------------
+
+.#{$reflex-prefix}col-auto {
+    @include setup-auto-cols();
+}
+
+@media (min-width: $reflex-xs) {
+    .#{$reflex-prefix}col-xs-auto {
+        @include setup-auto-cols();
+    }
+}
+
+@media (min-width: $reflex-sm) {
+    .#{$reflex-prefix}col-sm-auto {
+        @include setup-auto-cols();
+    }
+}
+
+@media (min-width: $reflex-md) {
+    .#{$reflex-prefix}col-md-auto {
+        @include setup-auto-cols();
+    }
+}
+
+@media (min-width: $reflex-lg) {
+    .#{$reflex-prefix}col-lg-auto {
+        @include setup-auto-cols();
+    }
+}
+
+@media (min-width: $reflex-xlg) {
+    .#{$reflex-prefix}col-xlg-auto {
+        @include setup-auto-cols();
+    }
+}
+
+// --------------------------------------------------
+// reflex order helpers generation
+// --------------------------------------------------
+
+@include make-order-helpers();
+
+@media only screen and (min-width: $reflex-xs) {
+    @include loop-order-helpers($reflex-columns, '-xs');
+}
+
+@media only screen and (min-width: $reflex-sm) {
+    @include loop-order-helpers($reflex-columns, '-sm');
+}
+
+@media only screen and (min-width: $reflex-md) {
+    @include loop-order-helpers($reflex-columns, '-md');
+}
+
+@media only screen and (min-width: $reflex-lg) {
+    @include loop-order-helpers($reflex-columns, '-lg');
+}
+
+@media only screen and (min-width: $reflex-xlg) {
+    @include loop-order-helpers($reflex-columns, '-xlg');
+}
+
+
+// --------------------------------------------------
+// grid modifiers
+// --------------------------------------------------
+
+// --------------------------------------------------
+// flex-wrap
+// --------------------------------------------------
+
+.#{$reflex-prefix}wrap {
+  @include flex-wrap(wrap);
+}
+
+.#{$reflex-prefix}no-wrap {
+  @include flex-wrap(nowrap);
+
+  // This is mostly needed to stop the grid contents overflowing in the
+  // ie10 implementation of flexbox but it can't hurt in other browsers
+  // as it is the desired behaviour of non wrapping flex items
+  [class^="#{$reflex-prefix}col-"] {
+      @include flex-shrink(1);
   }
-  .col-mr-auto {
-    margin-right: auto;
+}
+
+.#{$reflex-prefix}wrap-reverse {
+  @include flex-wrap(wrap-reverse);
+}
+
+// --------------------------------------------------
+// flex-direction
+// --------------------------------------------------
+
+.#{$reflex-prefix}direction-row {
+  @include flex-direction(row);
+}
+
+.#{$reflex-prefix}direction-row-reverse {
+  @include flex-direction(row-reverse);
+}
+
+.#{$reflex-prefix}direction-column {
+  @include flex-direction(column);
+}
+
+.#{$reflex-prefix}direction-column-reverse {
+  @include flex-direction(column-reverse);
+}
+
+// --------------------------------------------------
+// align items (cross axis)
+// --------------------------------------------------
+
+.#{$reflex-prefix}align-start {
+  @include align-items(flex-start);
+}
+
+.#{$reflex-prefix}align-end {
+  @include align-items(flex-end);
+
+  @if $legacy-support == true {
+      // fallback to legacy vertical-align
+      [class^="#{$reflex-prefix}col-"] {
+          vertical-align: bottom;
+      }
   }
-  @media (max-width: $size-xl) {
-    .col-xl-12,
-    .col-xl-11,
-    .col-xl-10,
-    .col-xl-9,
-    .col-xl-8,
-    .col-xl-7,
-    .col-xl-6,
-    .col-xl-5,
-    .col-xl-4,
-    .col-xl-3,
-    .col-xl-2,
-    .col-xl-1 {
-      flex: none;
-    }
-    .col-xl-12 {
-      width: 100%;
-    }
-    .col-xl-11 {
-      width: 91.66666667%;
-    }
-    .col-xl-10 {
-      width: 83.33333333%;
-    }
-    .col-xl-9 {
-      width: 75%;
-    }
-    .col-xl-8 {
-      width: 66.66666667%;
-    }
-    .col-xl-7 {
-      width: 58.33333333%;
-    }
-    .col-xl-6 {
-      width: 50%;
-    }
-    .col-xl-5 {
-      width: 41.66666667%;
-    }
-    .col-xl-4 {
-      width: 33.33333333%;
-    }
-    .col-xl-3 {
-      width: 25%;
-    }
-    .col-xl-2 {
-      width: 16.66666667%;
-    }
-    .col-xl-1 {
-      width: 8.33333333%;
-    }
-    .hide-xl {
-      display: none !important;
-    }
-    .show-xl {
-      display: block !important;
-    }
+}
+
+.#{$reflex-prefix}align-center {
+  @include align-items(center);
+
+  @if $legacy-support == true {
+      // fallback to legacy vertical-align
+      [class^="#{$reflex-prefix}col-"] {
+          vertical-align: middle;
+      }
   }
-  @media (max-width: $size-lg) {
-    .col-lg-12,
-    .col-lg-11,
-    .col-lg-10,
-    .col-lg-9,
-    .col-lg-8,
-    .col-lg-7,
-    .col-lg-6,
-    .col-lg-5,
-    .col-lg-4,
-    .col-lg-3,
-    .col-lg-2,
-    .col-lg-1 {
-      flex: none;
-    }
-    .col-lg-12 {
-      width: 100%;
-    }
-    .col-lg-11 {
-      width: 91.66666667%;
-    }
-    .col-lg-10 {
-      width: 83.33333333%;
-    }
-    .col-lg-9 {
-      width: 75%;
-    }
-    .col-lg-8 {
-      width: 66.66666667%;
-    }
-    .col-lg-7 {
-      width: 58.33333333%;
-    }
-    .col-lg-6 {
-      width: 50%;
-    }
-    .col-lg-5 {
-      width: 41.66666667%;
-    }
-    .col-lg-4 {
-      width: 33.33333333%;
-    }
-    .col-lg-3 {
-      width: 25%;
-    }
-    .col-lg-2 {
-      width: 16.66666667%;
-    }
-    .col-lg-1 {
-      width: 8.33333333%;
-    }
-    .hide-lg {
-      display: none !important;
-    }
-    .show-lg {
-      display: block !important;
-    }
+}
+
+.#{$reflex-prefix}align-baseline {
+  @include align-items(baseline);
+}
+
+// --------------------------------------------------
+// align content (cross axis)
+// --------------------------------------------------
+
+.#{$reflex-prefix}align-content-start {
+  @include align-content(flex-start);
+}
+
+.#{$reflex-prefix}align-content-end {
+  @include align-content(flex-end);
+
+  // fallback to legacy vertical-align
+  [class^="#{$reflex-prefix}col-"] {
+      vertical-align: bottom;
   }
-  @media (max-width: $size-md) {
-    .col-md-12,
-    .col-md-11,
-    .col-md-10,
-    .col-md-9,
-    .col-md-8,
-    .col-md-7,
-    .col-md-6,
-    .col-md-5,
-    .col-md-4,
-    .col-md-3,
-    .col-md-2,
-    .col-md-1 {
-      flex: none;
-    }
-    .col-md-12 {
-      width: 100%;
-    }
-    .col-md-11 {
-      width: 91.66666667%;
-    }
-    .col-md-10 {
-      width: 83.33333333%;
-    }
-    .col-md-9 {
-      width: 75%;
-    }
-    .col-md-8 {
-      width: 66.66666667%;
-    }
-    .col-md-7 {
-      width: 58.33333333%;
-    }
-    .col-md-6 {
-      width: 50%;
-    }
-    .col-md-5 {
-      width: 41.66666667%;
-    }
-    .col-md-4 {
-      width: 33.33333333%;
-    }
-    .col-md-3 {
-      width: 25%;
-    }
-    .col-md-2 {
-      width: 16.66666667%;
-    }
-    .col-md-1 {
-      width: 8.33333333%;
-    }
-    .hide-md {
-      display: none !important;
-    }
-    .show-md {
-      display: block !important;
-    }
+}
+
+.#{$reflex-prefix}align-content-center {
+  @include align-content(center);
+}
+
+.#{$reflex-prefix}align-content-space-between {
+  @include align-content(space-between);
+}
+
+.#{$reflex-prefix}align-content-space-around {
+  @include align-content(space-around);
+}
+
+// --------------------------------------------------
+// align-self
+// --------------------------------------------------
+
+.#{$reflex-prefix}align-self-stretch {
+  @include align-self(stretch);
+}
+
+.#{$reflex-prefix}align-self-start {
+  @include align-self(flex-start);
+}
+
+.#{$reflex-prefix}align-self-end {
+  @include align-self(flex-end);
+  vertical-align: bottom;
+}
+
+.#{$reflex-prefix}align-self-center {
+  @include align-self(center);
+  vertical-align: middle;
+}
+
+.#{$reflex-prefix}align-self-baseline {
+  @include align-self(baseline);
+  vertical-align: baseline;
+}
+
+// --------------------------------------------------
+// justify-content (main axis)
+// --------------------------------------------------
+
+.#{$reflex-prefix}justify-start {
+  @include justify-content-start();
+
+  @if $legacy-support == true {
+      &.grid {
+          text-align: left;
+      }
   }
-  @media (max-width: $size-sm) {
-    .col-sm-12,
-    .col-sm-11,
-    .col-sm-10,
-    .col-sm-9,
-    .col-sm-8,
-    .col-sm-7,
-    .col-sm-6,
-    .col-sm-5,
-    .col-sm-4,
-    .col-sm-3,
-    .col-sm-2,
-    .col-sm-1 {
-      flex: none;
-    }
-    .col-sm-12 {
-      width: 100%;
-    }
-    .col-sm-11 {
-      width: 91.66666667%;
-    }
-    .col-sm-10 {
-      width: 83.33333333%;
-    }
-    .col-sm-9 {
-      width: 75%;
-    }
-    .col-sm-8 {
-      width: 66.66666667%;
-    }
-    .col-sm-7 {
-      width: 58.33333333%;
-    }
-    .col-sm-6 {
-      width: 50%;
-    }
-    .col-sm-5 {
-      width: 41.66666667%;
-    }
-    .col-sm-4 {
-      width: 33.33333333%;
-    }
-    .col-sm-3 {
-      width: 25%;
-    }
-    .col-sm-2 {
-      width: 16.66666667%;
-    }
-    .col-sm-1 {
-      width: 8.33333333%;
-    }
-    .hide-sm {
-      display: none !important;
-    }
-    .show-sm {
-      display: block !important;
-    }
+}
+
+.#{$reflex-prefix}justify-end {
+  @include justify-content-end();
+
+  @if $legacy-support == true {
+      &.grid {
+          text-align: right;
+          -moz-text-align-last: right;
+          text-align-last: right;
+
+          [class^="#{$reflex-prefix}col-"] {
+              @include reset-text-align();
+          }
+      }
   }
-  @media (max-width: $size-xs) {
-    .col-xs-12,
-    .col-xs-11,
-    .col-xs-10,
-    .col-xs-9,
-    .col-xs-8,
-    .col-xs-7,
-    .col-xs-6,
-    .col-xs-5,
-    .col-xs-4,
-    .col-xs-3,
-    .col-xs-2,
-    .col-xs-1 {
-      flex: none;
-    }
-    .col-xs-12 {
-      width: 100%;
-    }
-    .col-xs-11 {
-      width: 91.66666667%;
-    }
-    .col-xs-10 {
-      width: 83.33333333%;
-    }
-    .col-xs-9 {
-      width: 75%;
-    }
-    .col-xs-8 {
-      width: 66.66666667%;
-    }
-    .col-xs-7 {
-      width: 58.33333333%;
-    }
-    .col-xs-6 {
-      width: 50%;
-    }
-    .col-xs-5 {
-      width: 41.66666667%;
-    }
-    .col-xs-4 {
-      width: 33.33333333%;
-    }
-    .col-xs-3 {
-      width: 25%;
-    }
-    .col-xs-2 {
-      width: 16.66666667%;
-    }
-    .col-xs-1 {
-      width: 8.33333333%;
-    }
-    .hide-xs {
-      display: none !important;
-    }
-    .show-xs {
-      display: block !important;
-    }
+}
+
+.#{$reflex-prefix}justify-center {
+  @include justify-content-center();
+
+  @if $legacy-support == true {
+      &.grid {
+          text-align: center;
+          -moz-text-align-last: center;
+          text-align-last: center;
+
+          [class^="#{$reflex-prefix}col-"] {
+              @include reset-text-align();
+          }
+      }
   }
+}
+
+.#{$reflex-prefix}justify-space-between {
+  @include justify-content-space-between();
+
+  @if $legacy-support == true {
+      &.grid {
+          text-align: justify;
+          -moz-text-align-last: justify;
+          text-align-last: justify;
+
+          [class^="#{$reflex-prefix}col-"] {
+              @include reset-text-align();
+          }
+      }
+  }
+}
+
+.#{$reflex-prefix}justify-space-around {
+  @include justify-content-space-around();
+
+  @if $legacy-support == true {
+      &.grid {
+          text-align: justify;
+          -moz-text-align-last: justify;
+          text-align-last: justify;
+
+          [class^="#{$reflex-prefix}col-"] {
+              @include reset-text-align();
+          }
+      }
+  }
+}
+
+// --------------------------------------------------
+// cosmetic grid modifiers
+// --------------------------------------------------
+
+// Removes internal padding from all columns in a grid
+.#{$reflex-prefix}grid-bleed {
+  [class*="#{$reflex-prefix}col-"] {
+      padding: 0;
+  }
+}
+
+// --------------------------------------------------
+// col modifiers
+// --------------------------------------------------
+
+// Makes a column element into a flexbox column
+.#{$reflex-prefix}col-grid {
+  @include display-flex();
+  @include flex-direction(column);
+
+  &.#{$reflex-prefix}direction-row {
+      @include flex-direction(row);
+  }
+}
+
+// Removes internal padding from all columns in a grid
+.#{$reflex-prefix}col-bleed {
+  padding: 0;
+}
+
+// Removes horizontal padding from all columns in a grid
+.#{$reflex-prefix}col-bleed-x {
+  padding: $reflex-grid-spacing 0;
+}
+
+// Removes vertical padding from all columns in a grid
+.#{$reflex-prefix}col-bleed-y {
+  padding: 0 $reflex-grid-spacing;
+}
+
+// --------------------------------------------------
+// col-grid contents
+// --------------------------------------------------
+
+.#{$reflex-prefix}flex-img {
+  display: block;
+  @include flex(0, 0, auto);
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  *width: auto;
+}
+
+.#{$reflex-prefix}flex-footer {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 0;
+
+  > :last-child {
+      margin-bottom: 0;
+  }
+}
+
+// --------------------------------------------------
+// Responsive visibility modifiers
+// --------------------------------------------------
+
+@include responsive-visibility-helpers();

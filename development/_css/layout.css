@@ -1,1 +1,98 @@
-.fl{float:left}.fr{float:right}.fn{float:none}.fu{float:unset}.db{display:block}.df{display:flex}.di{display:inline}.dt{display:table}.dib{display:inline-block}.dif{display:inline-flex}.dit{display:inline-table}.dtc{display:table-cell}.dtca{display:table-caption}.dtcg{display:table-column-group}.dfg{display:table-footer-group}.dthg{display:table-header-group}.dtr{display:table-row}.dtrg{display:table-row-group}.poa{position:absolute}.por{position:relative}.pof{position:fixed}.pou{position:unset}.poy{position:sticky}.pos{position:static}
+/* float */
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.fn {
+  float: none;
+}
+
+.fu {
+  float: unset;
+}
+
+/* dislpay */
+.db {
+  display: block;
+}
+
+.df {
+  display: flex;
+}
+
+.di {
+  display: inline;
+}
+
+.dt {
+  display: table;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.dif {
+  display: inline-flex;
+}
+
+.dit {
+  display: inline-table;
+}
+
+.dtc {
+  display: table-cell;
+}
+
+.dtca {
+  display: table-caption;
+}
+
+.dtcg {
+  display: table-column-group;
+}
+
+.dfg {
+  display: table-footer-group;
+}
+
+.dthg {
+  display: table-header-group;
+}
+
+.dtr {
+  display: table-row;
+}
+
+.dtrg {
+  display: table-row-group;
+}
+
+/* position */
+.poa {
+  position: absolute;
+}
+
+.por {
+  position: relative;
+}
+
+.pof {
+  position: fixed;
+}
+
+.pou {
+  position: unset;
+}
+
+.poy {
+  position: sticky;
+}
+
+.pos {
+  position: static;
+}

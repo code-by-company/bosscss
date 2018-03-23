@@ -1,1 +1,48 @@
-.ovv{overflow:visible}.ovh{overflow:hidden}.ovs{overflow:scroll}.ova{overflow:auto}.oxv{overflow-x:visible}.oxh{overflow-x:hidden}.oxs{overflow-x:scroll}.oxa{overflow-x:auto}.oyv{overflow-y:visible}.oyh{overflow-y:hidden}.oys{overflow-y:scroll}.oya{overflow-y:auto}
+/* overflow */
+.ovv {
+  overflow: visible;
+}
+
+.ovh {
+  overflow: hidden;
+}
+
+.ovs {
+  overflow: scroll;
+}
+
+.ova {
+  overflow: auto;
+}
+
+.oxv {
+  overflow-x: visible;
+}
+
+.oxh {
+  overflow-x: hidden;
+}
+
+.oxs {
+  overflow-x: scroll;
+}
+
+.oxa {
+  overflow-x: auto;
+}
+
+.oyv {
+  overflow-y: visible;
+}
+
+.oyh {
+  overflow-y: hidden;
+}
+
+.oys {
+  overflow-y: scroll;
+}
+
+.oya {
+  overflow-y: auto;
+}
