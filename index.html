@@ -9,6 +9,7 @@
     <link href="development/_css/boss.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -24,11 +25,15 @@
             display: none;
         }
     </style>
+    <script>
+        $(function() {
+            $("#header").load("header.html");
+        });
+    </script>
 </head>
 
 <body>
-
-    <section class="intro">
+    <!-- <section class="intro">
         <h1>BOSS.CSS</h1>
         <h2>The only <span>minimalist</span> lightweight Framework you need</h2>
         <p>
@@ -37,12 +42,14 @@
         <p class="tcwd fs5">Latest version:
             <span class="version">0.1.0</span>
         </p>
-    </section>
+    </section> -->
+    <div id="header"></div>
 
     <section class="main">
         <div class="container">
             <div class="columns">
-                <aside class="col-3 nav-tabs">
+                <aside class="col-2 nav-tabs oys lstn ">
+                    <li><input type="search" id="mySearch" placeholder="Search" class="bra6 " /></li>
                     <ul>
                         <li><a href="#border" rel="border">border</a></li>
                         <li><a href="#colors" rel="colors">colors</a></li>
@@ -68,58 +75,86 @@
                             <h3 class="example">Example</h3>
                             <div>
                                 <h4> Border-radius Pixels</h4>
-                                <p class="bra0 col-1 bs2 mb1 borderExample">.bra0</p>
-                                <p class="bra2 col-1 bs2 mb1 borderExample ">.bra2</p>
-                                <p class="bra4 col-1 bs2 mb1 borderExample">.bra4</p>
-                                <p class="bra6 col-1 bs2 mb1 borderExample">.bra6</p>
-                                <p class="bra8 col-1 bs2 mb1 borderExample">.bra8</p>
+                                <p class="bra0 col-1 bs1 mb1 borderExample">.bra0</p>
+                                <p class="bra2 col-1 bs1 mb1 borderExample ">.bra2</p>
+                                <p class="bra4 col-1 bs1 mb1 borderExample">.bra4</p>
+                                <p class="bra6 col-1 bs1 mb1 borderExample">.bra6</p>
+                                <p class="bra8 col-1 bs1 mb1 borderExample">.bra8</p>
                                 <br>
-                                <p class="bra10 col-1 bs2 mb1 borderExample">.bra10</p>
-                                <p class="bra12 col-1 bs2 mb1 borderExample">.bra12</p>
-                                <p class="bra16 col-1 bs2 mb1 borderExample">.bra16</p>
-                                <p class="bra18 col-1 bs2 mb1 borderExample">.bra18</p>
-                                <p class="bra20 col-1 bs2 mb1 borderExample">.bra20</p>
+                                <p class="bra10 col-1 bs1 mb1 borderExample">.bra10</p>
+                                <p class="bra12 col-1 bs1 mb1 borderExample">.bra12</p>
+                                <p class="bra16 col-1 bs1 mb1 borderExample">.bra16</p>
+                                <p class="bra18 col-1 bs1 mb1 borderExample">.bra18</p>
+                                <p class="bra20 col-1 bs1 mb1 borderExample">.bra20</p>
                                 <h4>Border-radius Percentage</h4>
-                                <p class="bpra0 col-1 bs2 mb1 borderExample">.bpra0</p>
-                                <p class="bpra5 col-1 bs2 mb1 borderExample">.bpra5</p>
-                                <p class="bpra10 col-1 bs2 mb1 borderExample">.bpra10</p>
-                                <p class="bpra15 col-1 bs2 mb1 borderExample">.bpra15</p>
-                                <p class="bpra20 col-1 bs2 mb1 borderExample">.bpra20</p>
+                                <p class="bpra0 col-1 bs1 mb1 borderExample">.bpra0</p>
+                                <p class="bpra5 col-1 bs1 mb1 borderExample">.bpra5</p>
+                                <p class="bpra10 col-1 bs1 mb1 borderExample">.bpra10</p>
+                                <p class="bpra15 col-1 bs1 mb1 borderExample">.bpra15</p>
+                                <p class="bpra20 col-1 bs1 mb1 borderExample">.bpra20</p>
                                 <br>
-                                <p class="bpra25 col-1 bs2 mb1 borderExample">.bpra25</p>
-                                <p class="bpra30 col-1 bs2 mb1 borderExample">.bpra30</p>
-                                <p class="bpra35 col-1 bs2 mb1 borderExample">.bpra40</p>
-                                <p class="bpra40 col-1 bs2 mb1 borderExample">.bpra45</p>
-                                <p class="bpra50 col-1 bs2 mb1 borderExample">.bpra50</p>
+                                <p class="bpra25 col-1 bs1 mb1 borderExample">.bpra25</p>
+                                <p class="bpra30 col-1 bs1 mb1 borderExample">.bpra30</p>
+                                <p class="bpra35 col-1 bs1 mb1 borderExample">.bpra40</p>
+                                <p class="bpra40 col-1 bs1 mb1 borderExample">.bpra45</p>
+                                <p class="bpra50 col-1 bs1 mb1 borderExample">.bpra50</p>
                             </div>
                             <h3 class="example"> Getting started</h3>
                             <h4>bra0</h4>
-                            <p class="col-xl-9 bcbd textGetting"> &lt;p class="<strong> bra0</strong> col-1 bs2 mb1" &gt;Example &lt;/p&gt;</p>
+                            <p class="col-6 bcbd textGetting"> &lt;p class="<strong> bra0</strong> col-2 bs1 mb1" &gt;Example &lt;/p&gt;</p>
                             <h4>bra2</h4>
-                            <p class="col-xl-9 bcbd textGetting"> &lt;p class="<strong> bra2</strong> col-1 bs2 mb1" &gt;Example &lt;/p&gt;</p>
+                            <p class="col-6 bcbd textGetting"> &lt;p class="<strong> bra2</strong> col-1 bs1 mb1" &gt;Example &lt;/p&gt;</p>
                             <h4>bra4</h4>
-                            <p class="col-xl-9 bcbd textGetting"> &lt;p class="<strong> bra4</strong> col-1 bs2 mb1" &gt;Example &lt;/p&gt;</p>
+                            <p class="col-6 bcbd textGetting"> &lt;p class="<strong> bra4</strong> col-1 bs1 mb1" &gt;Example &lt;/p&gt;</p>
                             <h4>bra6</h4>
-                            <p class="col-xl-9 bcbd textGetting"> &lt;p class="<strong> bra6</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
+                            <p class="col-6 bcbd textGetting"> &lt;p class="<strong> bra6</strong> col-1 bs1 mb1"&gt;Example &lt;/p&gt;</p>
                             <h4>bra8</h4>
-                            <p class="col-xl-9 bcbd textGetting"> &lt;p class="<strong> bra8</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
+                            <p class="col-6 bcbd textGetting"> &lt;p class="<strong> bra8</strong> col-1 bs1 mb1"&gt;Example &lt;/p&gt;</p>
                             <h4>bra10</h4>
-                            <p class="col-xl-9 bcbd textGetting"> &lt;p class="<strong> bra10</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
+                            <p class="col-6 bcbd textGetting"> &lt;p class="<strong> bra10</strong> col-1 bs mb1"&gt;Example &lt;/p&gt;</p>
                             <h4>bra12</h4>
-                            <p class="col-xl-9 bcbd textGetting"> &lt;p class="<strong> bra12</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
+                            <p class="col-6 bcbd textGetting"> &lt;p class="<strong> bra12</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
                             <h4>bra16</h4>
-                            <p class="col-xl-9 bcbd textGetting"> &lt;p class="<strong> bra16</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
+                            <p class="col-6 bcbd textGetting"> &lt;p class="<strong> bra16</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
                             <h4>bra18</h4>
-                            <p class="col-xl-9 bcbd textGetting"> &lt;p class="<strong> bra18</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
+                            <p class="col-6 bcbd textGetting"> &lt;p class="<strong> bra18</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
                             <h4>bra20</h4>
-                            <p class="col-xl-9 bcbd textGetting"> &lt;p class="<strong> bra20</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
+                            <p class="col-6 bcbd textGetting"> &lt;p class="<strong> bra20</strong> col-1 bs2 mb1"&gt;Example &lt;/p&gt;</p>
                         </div>
                     </article>
+                    <code>
+                           
+                        <xmp>
+                                <article id="colors" class="main-tabs">
+                                        <h1>colors</h1>
+                                        <div class="content">
+                                            <p> collection of classes for font and background colors </p>
+                                            <h3 class="example">Color palette</h3>
+                                            <div class="palletCollor">
+                                                <div class=" bcpl bra4 bs2 col-2" style=" height:65px;"></div>
+                                                <div>
+                                                    <p>Sundown</p>
+                                                    <p>#ffacac</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                        </xmp>
+                            
+                    </code>
 
                     <article id="colors" class="main-tabs">
                         <h1>colors</h1>
                         <div class="content">
-
+                            <p> collection of classes for font and background colors </p>
+                            <h3 class="example">Color palette</h3>
+                            <div class="palletCollor">
+                                <div class=" bcpl bra4 bs2 col-2" style=" height:65px;"></div>
+                                <div>
+                                    <p>Sundown</p>
+                                    <p>#ffacac</p>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
@@ -189,6 +224,9 @@
                     <article id="rotate" class="main-tabs">
                         <h1>rotate</h1>
                         <div class="content">
+                            <p>CSS 2D Transforms allow elements rendered by CSS to be trans- formed in two-dimensional space.</p>
+                            <h3 class="example">Example</h3>
+                            <p class="bra6 col-1 bs2 mb1 ro45 borderExample">.bra6</p>
 
                         </div>
                     </article>
@@ -211,7 +249,6 @@
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
             //  When user clicks on tab, this code will be executed

@@ -1,4 +1,4 @@
-/* ul {
+.menu ul {
     border-bottom: 1px solid rgba(85, 85, 85, 0.3);
     list-style-type: none;
     margin: 0;
@@ -6,18 +6,25 @@
     overflow: hidden;
 }
 
-li {
+.menu li {
     float: left;
 }
 
-li a {
+.menu li a {
     display: inline-block;
     color: black;
     margin: 10px 0px 10px 10px;
     text-align: center;
     padding: 20px 16px;
     text-decoration: none;
-} */
+}
+
+.buttomBit {
+    float: right;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
 
 .imgMenu {
     float: left;
@@ -31,11 +38,26 @@ li a {
     display: inline-block;
     height: 65px;
     line-height: 4;
-    margin: 5px 10px 25px 0;
+    margin: 0px 10px 25px 0;
     text-align: center;
 }
 
 .textGetting {
     height: 50px;
     text-align: center;
+}
+
+.palletCollor {
+    display: inline-block;
+}
+
+.precode {
+    resize: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    display: block;
+    overflow: hidden;
+    outline: none !important;
 }
