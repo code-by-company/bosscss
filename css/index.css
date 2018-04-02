@@ -42,13 +42,25 @@
     text-align: center;
 }
 
+.centerTexth5 {
+    margin-left: 421px;
+}
+
 .textGetting {
     height: 50px;
     text-align: center;
 }
 
 .palletCollor {
-    display: inline-block;
+    display: flex;
+}
+
+.gridColor {
+    margin-right: 15px;
+}
+
+.space {
+    margin: 0 40px 20px 0;
 }
 
 .precode {

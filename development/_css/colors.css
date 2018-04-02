@@ -1,99 +1,110 @@
 /* background color variables */
+
+
 /* text color variables */
+
+
 /* background colors */
+
 .bcpl {
-  background-color: #ffacac;
+    background-color: #ffacac;
 }
 
 .bcpm {
-  background-color: #ff5d5d;
+    background-color: #ff5d5d;
 }
 
 .bcpb {
-  background-color: #c70000;
+    background-color: #c70000;
 }
 
 .bcsl {
-  background-color: #d8ffd3;
+    background-color: #d8ffd3;
 }
 
 .bcsm {
-  background-color: #6dff57;
+    background-color: #6dff57;
 }
 
 .bcsb {
-  background-color: #19bf00;
+    background-color: #19bf00;
 }
 
 .bcwl {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 .bcwm {
-  background-color: #e0e0e0;
+    background-color: #e0e0e0;
 }
 
 .bcwd {
-  background-color: #b5b5b5;
+    background-color: #b5b5b5;
 }
 
 .bcbl {
-  background-color: #ffffff;
+    background-color: #FFCD00;
 }
 
 .bcbm {
-  background-color: #e0e0e0;
+    background-color: #008BEA;
 }
 
 .bcbd {
-  background-color: #b5b5b5;
+    background-color: #003349;
 }
 
+.bcbr {
+    background-color: #00eac3
+}
+
+
 /* text colors */
+
 .tcpl {
-  color: #ffacac;
+    color: #ffacac;
 }
 
 .tcpm {
-  color: #ff5d5d;
+    color: #ff5d5d;
 }
 
 .tcpb {
-  color: #c70000;
+    color: #c70000;
 }
 
 .tcsl {
-  color: #d8ffd3;
+    color: #d8ffd3;
 }
 
 .tcsm {
-  color: #6dff57;
+    color: #6dff57;
 }
 
 .tcsb {
-  color: #19bf00;
+    color: #19bf00;
 }
 
 .tcwl {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .tcwm {
-  color: #e0e0e0;
+    color: #e0e0e0;
 }
 
 .tcwd {
-  color: #b5b5b5;
+    color: #b5b5b5;
 }
 
 .tcbl {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .tcbm {
-  color: #e0e0e0;
+    color: #e0e0e0;
 }
 
 .tcbd {
-  color: #b5b5b5;
+    color: #b5b5b5;
 }
