@@ -19,6 +19,21 @@
     text-decoration: none;
 }
 
+xmp {
+    text-align: left;
+    float: left;
+    display: block;
+    background: #3a4151b4 !important;
+    align-items: left;
+    all: inherit;
+    padding: 30px;
+    color: rgb(90, 167, 168);
+    font-family: monospace;
+    font-size: 14px;
+    font-style: oblique;
+    width: 100% !important;
+}
+
 .buttomBit {
     float: right;
     position: absolute;
@@ -42,10 +57,6 @@
     text-align: center;
 }
 
-.centerTexth5 {
-    margin-left: 421px;
-}
-
 .textGetting {
     height: 50px;
     text-align: center;
@@ -59,8 +70,18 @@
     margin-right: 15px;
 }
 
+.overflowStyle {
+    width: 150px;
+    height: 150px;
+    ;
+}
+
+.widthOverflow {
+    margin: 0 26px 15px 0px;
+}
+
 .space {
-    margin: 0 40px 20px 0;
+    margin: 0 30px 20px 0;
 }
 
 .precode {
