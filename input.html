@@ -1,0 +1,20 @@
+<h2 class="example"> Code</h2>
+<xmp>input[type="checkbox"], input[type="radio"] { width: 18px; appearance: none; -webkit-appearance: none; outline: none; position: relative; border: none; cursor: pointer; outline-width: 0; border-radius: 50%; }</xmp>
+<xmp>input[type="checkbox"]:focus, input[type="radio"]:focus { animation: press .8s 1; }</xmp>
+<xmp>input[type="checkbox"]:before, input[type="checkbox"]:after, input[type="radio"]:before, input[type="radio"]:after { content: ""; }</xmp>
+<xmp>input[type="checkbox"]:after, input[type="radio"]:after { display: block; width: 18px; height: 18px; margin-top: -2px; margin-right: 5px; border: 2px solid #666; transition: 240ms; }</xmp>
+<xmp>input[type="checkbox"]:disabled:after, input[type="radio"]:disabled:after { border-color: #ddd; background-color: #eee; cursor: not-allowed; }</xmp>
+<xmp>input[type="checkbox"]:disabled:checked:after, input[type="radio"]:disabled:checked:after { background-color: #eee; border-color: #ddd; }</xmp>
+<xmp>input[type="checkbox"]:disabled:checked:before, input[type="radio"]:disabled:checked:before { border-color: #999; }</xmp>
+<xmp>input[type="checkbox"]:after { border-radius: 2px; background-color: transparent; z-index: 999; }</xmp>
+<xmp>input[type="checkbox"]:checked:after { background-color: #ff5d5d; border-color: #ff5d5d; }</xmp>
+<xmp>input[type="checkbox"]:checked:before { content: ""; position: absolute; top: 0; left: 6px; display: table; width: 6px; height: 12px; border: 2px solid #fff; border-top-width: 0; border-left-width: 0; transform: rotate(45deg); }
+</xmp>
+<xmp>input[type="radio"]:before { position: absolute; left: 0; top: 0; background-color: #ff5d5d; width: 18px; height: 18px; display: block; margin-top: -2px; border-radius: 50%; transition: 240ms; transform: scale(0); }</xmp>
+<xmp>input[type="radio"]:after { border-radius: 50%; }</xmp>
+<xmp>input[type="radio"]:checked:before { transform: scale(0.5); }</xmp>
+<xmp>input[type="radio"]:checked:after { border-color: #ff5d5d; background-color: transparent; }</xmp>
+<xmp>input[type="radio"]:checked:disabled:before { background-color: #ccc; }
+</xmp>
+<xmp>@keyframes press { 0% { box-shadow: 0 0 0 0 #ff9090; } 50% { box-shadow: 0 0 0 15px rgba(255, 144, 144, 0.4); } 100% { box-shadow: 0 0 0 15px rgba(255, 144, 144, 0); } }
+</xmp>

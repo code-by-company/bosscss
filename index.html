@@ -29,6 +29,12 @@
     <script>
         $(function() {
             $("#header").load("header.html");
+            $("#pageBorder").load("border.html")
+            $("#pageColors").load("colors.html")
+            $("#pageShadow").load("shadow.html")
+            $("#pageGrid").load("grid.html")
+            $("#pageInput").load("input.html")
+            $("pagePadding").load("padding.html")
         });
     </script>
 </head>
@@ -79,379 +85,178 @@
                     <article id="border" class="main-tabs" style="display:block;">
                         <h1>border</h1>
                         <div class="content">
-                            <p> allows you to define border characteristics </p>
-                            <h3 class="example">Example</h3>
-                            <div>
-                                <h4> Border-radius Pixels</h4>
-                                <p class="bra0 col-1 bs1 mb1 borderExample">.bra0</p>
-                                <p class="bra2 col-1 bs1 mb1 borderExample ">.bra2</p>
-                                <p class="bra4 col-1 bs1 mb1 borderExample">.bra4</p>
-                                <p class="bra6 col-1 bs1 mb1 borderExample">.bra6</p>
-                                <p class="bra8 col-1 bs1 mb1 borderExample">.bra8</p>
-                                <br>
-                                <p class="bra10 col-1 bs1 mb1 borderExample">.bra10</p>
-                                <p class="bra12 col-1 bs1 mb1 borderExample">.bra12</p>
-                                <p class="bra16 col-1 bs1 mb1 borderExample">.bra16</p>
-                                <p class="bra18 col-1 bs1 mb1 borderExample">.bra18</p>
-                                <p class="bra20 col-1 bs1 mb1 borderExample">.bra20</p>
-                                <h4>Border-radius Percentage</h4>
-                                <p class="bpra0 col-1 bs1 mb1 borderExample">.bpra0</p>
-                                <p class="bpra5 col-1 bs1 mb1 borderExample">.bpra5</p>
-                                <p class="bpra10 col-1 bs1 mb1 borderExample">.bpra10</p>
-                                <p class="bpra15 col-1 bs1 mb1 borderExample">.bpra15</p>
-                                <p class="bpra20 col-1 bs1 mb1 borderExample">.bpra20</p>
-                                <br>
-                                <p class="bpra25 col-1 bs1 mb1 borderExample">.bpra25</p>
-                                <p class="bpra30 col-1 bs1 mb1 borderExample">.bpra30</p>
-                                <p class="bpra35 col-1 bs1 mb1 borderExample">.bpra40</p>
-                                <p class="bpra40 col-1 bs1 mb1 borderExample">.bpra45</p>
-                                <p class="bpra50 col-1 bs1 mb1 borderExample">.bpra50</p>
-                            </div>
-                            <h3 class="example"> Getting started</h3>
-                            <div>
-                                <h4 class="centerTexth5">bra0</h4>
-                                <xmp>
-                                    <p class="bra0 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                                <h4 class="centerTexth5">bra2</h4>
-                                <xmp>
-                                    <p class="bra2 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                                <h4 class="centerTexth5">bra4</h4>
-                                <xmp>
-                                    <p class="bra4 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                                <h4 class="centerTexth5">bra6</h4>
-                                <xmp>
-                                    <p class="bra6 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                                <h4 class="centerTexth5">bra8</h4>
-                                <xmp>
-                                    <p class="bra8 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                                <h4 class="centerTexth5">bra10</h4>
-                                <xmp>
-                                    <p class="bra10 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                                <h4 class="centerTexth5">bra12</h4>
-                                <xmp>
-                                    <p class="bra12 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                                <h4 class="centerTexth5">bra16</h4>
-                                <xmp>
-                                    <p class="bra16 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                                <h4 class="centerTexth5">bra18</h4>
-                                <xmp>
-                                    <p class="bra18 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                                <h4 class="centerTexth5">bra20</h4>
-                                <xmp>
-                                    <p class="bra20 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                            </div>
-                            <h3 class="example"> Code</h3>
-                            <div>
-                                <xmp>.bra0 { border-radius: 0px; }</xmp>
-                                <xmp>.bra2 { border-radius: 2px; }</xmp>
-                                <xmp>.bra4 { border-radius: 4px; }</xmp>
-                                <xmp>.bra6 { border-radius: 6px; }</xmp>
-                                <xmp>.bra8 { border-radius: 8px; }</xmp>
-                                <xmp>.bra10 { border-radius: 10px; }</xmp>
-                                <xmp>.bra12 { border-radius: 12px; }</xmp>
-                                <xmp>.bra16 { border-radius: 16px; }</xmp>
-                                <xmp>.bra18 { border-radius: 18px; }</xmp>
-                                <xmp>.bra20 { border-radius: 20px; }</xmp>
-                                <xmp>.bpra0 { border-radius: 0%; }</xmp>
-                                <xmp>.bpra5 { border-radius: 5%; }</xmp>
-                                <xmp>.bpra10 { border-radius: 10%; }</xmp>
-                                <xmp>.bpra15 { border-radius: 15%; }</xmp>
-                                <xmp>.bpra20 { border-radius: 20%; }</xmp>
-                                <xmp>.bpra25 { border-radius: 25%; }</xmp>
-                                <xmp>.bpra30 { border-radius: 30%; }</xmp>
-                                <xmp>.bpra40 { border-radius: 40%; }</xmp>
-                                <xmp>.bpra45 { border-radius: 45%; }</xmp>
-                                <xmp>.bpra50 { border-radius: 50%; }</xmp>
-                            </div>
+                            <div id="pageBorder"></div>
                         </div>
                     </article>
+
                     <article id="colors" class="main-tabs">
                         <h1>colors</h1>
                         <div class="content">
-                            <p> collection of classes for font and background colors </p>
-                            <h3 class="example">Color palette</h3>
-                            <h2 class="example">Background</h2>
-                            <div class="palletCollor">
-                                <div class=" bcpl bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Sundown</p>
-                                    <p>#ffacac</p>
-                                </div>
-                                <div class=" bcpm bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Bittersweet</p>
-                                    <p>#ff5d5d</p>
-                                </div>
-                                <div class=" bcpb bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Strong red</p>
-                                    <p>#c70000</p>
-                                </div>
-                                <div class=" bcsl bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Verg pale green</p>
-                                    <p>#d8ffd3</p>
-                                </div>
-                                <div class=" bcsm bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Light green</p>
-                                    <p>#6dff57</p>
-                                </div>
-                                <div class=" bcsb bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Islamic green</p>
-                                    <p>#19bf00</p>
-                                </div>
-                                <div class=" bcwl bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>White</p>
-                                    <p>#fffffff</p>
-                                </div>
-                                <div class=" bcwm bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Gainsboro</p>
-                                    <p>#e0e0e0</p>
-                                </div>
-                                <div class=" bcbl bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Gainsboro</p>
-                                    <p>#e0e0e0</p>
-                                </div>
-                                <div class=" bcbm bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Gainsboro</p>
-                                    <p>#e0e0e0</p>
-                                </div>
-                                <div class=" bcbd bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Gainsboro</p>
-                                    <p>#e0e0e0</p>
-                                </div>
-                                <div class=" bcbr bra4 bs1 col-12 borderExample" style=" height:65px;">
-                                    <p>Gainsboro</p>
-                                    <p>#e0e0e0</p>
-                                </div>
-                            </div>
+                            <div id="pageColors"></div>
                         </div>
                     </article>
 
                     <article id="elevations" class="main-tabs">
                         <h1>Shadow</h1>
                         <div class="content">
-                            <p>The shadow property attaches one or more shadows to an element.</p>
-                            <h3 class="example">Box shadow</h3>
-                            <div class="boxshadow">
-                                <h4>Box shadow</h4>
-                                <p class="bra6 col-1 bs1 mb1 borderExample">.bs1</p>
-                                <p class="bra6 col-1 bs2 mb1 borderExample">.bs2</p>
-                                <p class="bra6 col-1 bs3 mb1 borderExample">.bs3</p>
-                                <p class="bra6 col-1 bs4 mb1 borderExample">.bs4</p>
-                                <h4>Box shadow hover</h4>
-                                <p class="bra6 col-1 bsh1 mb1 borderExample">.bsh1</p>
-                                <p class="bra6 col-1 bsh2 mb1 borderExample">.bsh3</p>
-                                <p class="bra6 col-1 bsh3 mb1 borderExample">.bsh4</p>
-                                <p class="bra6 col-1 bsh3 mb1 borderExample">.bsh4</p>
-                            </div>
-                            <div>
-                                <h3 class="example"> Getting started</h3>
-                                <h4>Box Shadow</h4>
-                                <h5 class="centerTexth5">bs1</h5>
-                                <xmp>
-                                    <p class="bra6 col-1 bs1 mb1">Example</p>
-                                </xmp>
-                                <h5 class="centerTexth5">bs2</h5>
-                                <xmp>
-                                    <p class="bra6 col-1 bs2 mb1">Example</p>
-                                </xmp>
-                                <h5 class="centerTexth5">bs3</h5>
-                                <xmp>
-                                    <p class="bra6 col-1 bs3 mb1">Example</p>
-                                </xmp>
-                                <h5 class="centerTexth5">bs4</h5>
-                                <xmp>
-                                    <p class="bra6 col-1 bs4 mb1">Example</p>
-                                </xmp>
-                                <h4> Box shadow hover</h4>
-                                <h5 class="centerTexth5">bsh1</h5>
-                                <xmp>
-                                    <p class="bra6 col-1 bsh1 mb1">Example</p>
-                                </xmp>
-                                <h5 class="centerTexth5">bsh2</h5>
-                                <xmp>
-                                    <p class="bra6 col-1 bsh2 mb1">Example</p>
-                                </xmp>
-                                <h5 class="centerTexth5">bsh3</h5>
-                                <xmp>
-                                    <p class="bra6 col-1 bsh3 mb1">Example</p>
-                                </xmp>
-                                <h5 class="centerTexth5">bsh4</h5>
-                                <xmp>
-                                    <p class="bra6 col-1 bsh4 mb1">Example</p>
-                                </xmp>
-                            </div>
-                            <div>
-                                <h3 class="example">Code </h3>
-                                <h4> Box shadow</h4>
-                                <xmp>
-                                    .bs1 { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-                                </xmp>
-                                <xmp>
-                                    .bs2 { box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-                                </xmp>
-                                <xmp>
-                                    .bs3 { box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
-                                </xmp>
-                                <xmp>
-                                    .bs4 { box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-                                </xmp>
-                                <h4>Box shadow hover</h4>
-                                <xmp>
-                                    .bsh1 { box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-                                </xmp>
-                                <xmp>
-                                    .bsh2 { box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
-                                </xmp>
-                                <xmp>
-                                    .bsh3 { box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-                                </xmp>
-                                <xmp>
-                                    .bsh4 { box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
-                                </xmp>
-                            </div>
+                            <div id="pageShadow"></div>
                         </div>
                     </article>
 
                     <article id="grid" class="main-tabs">
                         <h1>grid</h1>
                         <div class="content">
-
+                            <div id="pageGrid"></div>
                         </div>
                     </article>
 
                     <article id="input" class="main-tabs">
                         <h1>input</h1>
                         <div class="content">
-
+                            <div id="pageInput"></div>
                         </div>
                     </article>
 
                     <article id="layout" class="main-tabs">
                         <h1>layout</h1>
-                        <div class="content">
-
-                        </div>
+                        <div class="content"></div>
                     </article>
 
                     <article id="lists" class="main-tabs">
                         <h1>lists</h1>
                         <div class="content">
-                            <p>The shadow property attaches one or more shadows to an element.</p>
-                            <h3 class="example">Example</h3>
-                            <div>
-                                <h4>.lstn</h4>
-                                <ul id="menu-vertical-menu" class="nav">
-                                    <li class="lstn"><a>List1</a></li>
-                                    <li class="lstn"><a>List2</a></li>
-                                    <li class="lstn"><a>List3</a></li>
-                                    <li class="lstn"><a>List4</a></li>
-                                </ul>
-                                <h4>.lstc</h4>
-                                <ul id="menu-vertical-menu" class="nav">
-                                    <li class="lstc"><a>List1</a></li>
-                                    <li class="lstc"><a>List2</a></li>
-                                    <li class="lstc"><a>List3</a></li>
-                                    <li class="lstc"><a>List4</a></li>
-                                </ul>
-                                <h4>.lsts</h4>
-                                <ul id="menu-vertical-menu" class="nav">
-                                    <li class="lsts"><a>List1</a></li>
-                                    <li class="lsts"><a>List2</a></li>
-                                    <li class="lsts"><a>List3</a></li>
-                                    <li class="lsts"><a>List4</a></li>
-                                </ul>
-                                <h4>.lspi</h4>
-                                <ul id="menu-vertical-menu" class="nav">
-                                    <li class="lspi"><a>List1</a></li>
-                                    <li class="lspi"><a>List2</a></li>
-                                    <li class="lspi"><a>List3</a></li>
-                                    <li class="lspi"><a>List4</a></li>
-                                </ul>
-                            </div>
-                            <h3 class="example">Getting started</h3>
-                            <div>
-                                <h4 class="centerTexth5">.lstn</h4>
-                                <xmp>
-                                    <ul>
-                                        <li class="lstn"><a>Example</a></li>
-                                        <li class="lstn"><a>Example</a></li>
-                                        <li class="lstn"><a>Example</a></li>
-                                        <li class="lstn"><a>Example</a></li>
-                                    </ul>
-                                </xmp>
-                                <h4 class="centerTexth5">.lstc</h4>
-                                <xmp>
-                                    <ul>
-                                        <li class="lstc"><a>Example</a></li>
-                                        <li class="lstc"><a>Example</a></li>
-                                        <li class="lstc"><a>Example</a></li>
-                                        <li class="lstc"><a>Example</a></li>
-                                    </ul>
-                                </xmp>
-                                <h4 class="centerTexth5">.lsts</h4>
-                                <xmp>
-                                    <ul>
-                                        <li class="lsts"><a>Example</a></li>
-                                        <li class="lsts"><a>Example</a></li>
-                                        <li class="lsts"><a>Example</a></li>
-                                        <li class="lsts"><a>Example</a></li>
-                                    </ul>
-                                </xmp>
-                                <h4 class="centerTexth5">.lspi</h4>
-                                <xmp>
-                                    <ul>
-                                        <li class="lspi"><a>Example</a></li>
-                                        <li class="lspi"><a>Example</a></li>
-                                        <li class="lspi"><a>Example</a></li>
-                                        <li class="lspi"><a>Example</a></li>
-                                    </ul>
-                                </xmp>
-                            </div>
-                            <h3 class="example">Code</h3>
-                            <xmp>
-                                .lstn { list-style-type: none; }
-                            </xmp>
-                            <xmp>
-                                .lstc { list-style-type: circle; }
-                            </xmp>
-                            <xmp>
-                                .lsts { list-style-type: square; }
-                            </xmp>
-                            <xmp>
-                                .lspo { list-style-position: outside; }
-                            </xmp>
-                            <xmp>
-                                .lspi { list-style-position: inside; }
-                            </xmp>
                         </div>
                     </article>
 
                     <article id="margin" class="main-tabs">
                         <h1>margin</h1>
-                        <div class="content">
-
-                        </div>
+                        <div class="content"></div>
                     </article>
 
                     <article id="overflow" class="main-tabs">
                         <h1>overflow</h1>
                         <div class="content">
-
+                            <p>The overflow property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.</p>
+                            <h2 class="example">Example</h2>
+                            <div style="display: flex;flex-wrap:  wrap;width: 100%;/* margin-right: 100px;">
+                                <div class="widthOverflow">
+                                    <h3>Overflow: Visible</h3>
+                                    <div class="ovv overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div>
+                                <div class="widthOverflow">
+                                    <h3>Overflow: Hidden</h3>
+                                    <div class="ovh overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div>
+                                <div class="widthOverflow">
+                                    <h3>Overflow:Scroll</h3>
+                                    <div class="ovs overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div><br>
+                                <div class="widthOverflow">
+                                    <h3>Overflow: Auto</h3>
+                                    <div class="ova overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div>
+                                <div class="widthOverflow">
+                                    <h3>Overflow-x: Visible</h3>
+                                    <div class="oxv overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div>
+                                <div class="widthOverflow">
+                                    <h3>Overflow-x: Hidden</h3>
+                                    <div class="oxh overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div><br>
+                                <div class="widthOverflow">
+                                    <h3>Overflow-x: Scroll</h3>
+                                    <div class="oxs overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div>
+                                <div class="widthOverflow">
+                                    <h3>Overflow-x: Auto</h3>
+                                    <div class="oxa overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div>
+                                <div class="widthOverflow">
+                                    <h3>Overflow-y: Visible</h3>
+                                    <div class="oyv overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div><br>
+                                <div class="widthOverflow">
+                                    <h3>Overflow-y: Hidden</h3>
+                                    <div class="oyh overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div>
+                                <div class="widthOverflow">
+                                    <h3>Overflow-y: Scroll</h3>
+                                    <div class="oys overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div>
+                                <div class="widthOverflow">
+                                    <h3>Overflow-y: Auto</h3>
+                                    <div class="oya overflowStyle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                                </div>
+                            </div>
+                            <h2 class="example">Getting Started</h2>
+                            <h3 class="">.ovv</h3>
+                            <xmp>
+                                <div class="ovv">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.ovh</h3>
+                            <xmp>
+                                <div class="ovh">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.ovs</h3>
+                            <xmp>
+                                <div class="ovs">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.ova</h3>
+                            <xmp>
+                                <div class="ova">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.oxv</h3>
+                            <xmp>
+                                <div class="oxv">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.oxh</h3>
+                            <xmp>
+                                <div class="oxh">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.oxs</h3>
+                            <xmp>
+                                <div class="oxs">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.oxa</h3>
+                            <xmp>
+                                <div class="oxa">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.oyv</h3>
+                            <xmp>
+                                <div class="oyv">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.oyh</h3>
+                            <xmp>
+                                <div class="oyh">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.oys</h3>
+                            <xmp>
+                                <div class="oys">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h3 class="">.oya</h3>
+                            <xmp>
+                                <div class="oya">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+                            </xmp>
+                            <h2 class="example">Code</h2>
+                            <xmp>.ovv { overflow: visible; }</xmp>
+                            <xmp>.ovh { overflow: hidden; }</xmp>
+                            <xmp>.ovs { overflow: scroll; }</xmp>
+                            <xmp>.ova { overflow: auto; }</xmp>
+                            <xmp>.oxv { overflow-x: visible; }</xmp>
+                            <xmp>.oxh { overflow-x: hidden; }</xmp>
+                            <xmp>.oxs { overflow-x: scroll; }</xmp>
+                            <xmp>.oxa { overflow-x: auto; }</xmp>
+                            <xmp>.oyv { overflow-y: visible; }</xmp>
+                            <xmp>.oyh { overflow-y: hidden; }</xmp>
+                            <xmp>.oys { overflow-y: scroll; }</xmp>
+                            <xmp>.oya { overflow-y: auto; }</xmp>
                         </div>
                     </article>
 
                     <article id="padding" class="main-tabs">
                         <h1>padding</h1>
                         <div class="content">
-
+                            <div id="pagePadding"></div>
                         </div>
                     </article>
 
@@ -478,31 +283,31 @@
                             </div>
                             <h2 class="example">Getting Started</h2>
                             <div>
-                                <h4 class="centerTexth5">.ro45</h4>
+                                <h4 class="">.ro45</h4>
                                 <xmp>
                                     <p class="bra6 col-1 bs2 mb1 ro45 ">.Example</p>
                                 </xmp>
-                                <h4 class="centerTexth5">.ro90</h4>
+                                <h4 class="">.ro90</h4>
                                 <xmp>
                                     <p class="bra6 col-1 bs2 mb1 ro90 ">.Example</p>
                                 </xmp>
-                                <h4 class="centerTexth5">.ro135</h4>
+                                <h4 class="">.ro135</h4>
                                 <xmp>
                                     <p class="bra6 col-1 bs2 mb1 ro135 ">.Example</p>
                                 </xmp>
-                                <h4 class="centerTexth5">.ro180</h4>
+                                <h4 class="">.ro180</h4>
                                 <xmp>
                                     <p class="bra6 col-1 bs2 mb1 ro180 ">.Example</p>
                                 </xmp>
-                                <h4 class="centerTexth5">.ro225</h4>
+                                <h4 class="">.ro225</h4>
                                 <xmp>
                                     <p class="bra6 col-1 bs2 mb1 ro225 ">.Example</p>
                                 </xmp>
-                                <h4 class="centerTexth5">.ro270</h4>
+                                <h4 class="">.ro270</h4>
                                 <xmp>
                                     <p class="bra6 col-1 bs2 mb1 ro270 ">.Example</p>
                                 </xmp>
-                                <h4 class="centerTexth5">.ro315</h4>
+                                <h4 class="">.ro315</h4>
                                 <xmp>
                                     <p class="bra6 col-1 bs2 mb1 ro315 ">.Example</p>
                                 </xmp>
@@ -522,158 +327,7 @@
 
                     <article id="typography" class="main-tabs">
                         <h1>typography</h1>
-                        <div class="content">
-                            <p>The CSS font properties define the font family, boldness, size, and the style of a text.</p>
-                            <h2 class="example">Example</h2>
-                            <h3 class="example">Font-weight</h3>
-                            <div>
-                                <p class="col-1 mb1 fw1 borderExample">.fw1</p>
-                                <p class="col-1 mb1 fw2 borderExample">.fw2</p>
-                                <p class="col-1 mb1 fw3 borderExample">.fw3</p>
-                                <p class="col-1 mb1 fw4 borderExample">.fw4</p>
-                                <p class="col-1 mb1 fw5 borderExample">.fw5</p>
-                                <p class="col-1 mb1 fw6 borderExample">.fw6</p>
-                                <p class="col-1 mb1 fw7 borderExample">.fw7</p>
-                                <p class="col-1 mb1 fw8 borderExample">.fw8</p>
-                                <p class="col-1 mb1 fw9 borderExample">.fw9</p>
-                            </div>
-                            <h3 class="example">Font-size</h3>
-                            <table style="width: 100%">
-                                <tr>
-                                    <th>SMALL</th>
-                                    <th>MEDIUM</th>
-                                    <th>LARGE</th>
-                                </tr>
-                                <tr>
-                                    <th class="fs1">.fs1</th>
-                                    <th class="fm1">.fm1</th>
-                                    <th class="fl1">.fl1</th>
-                                </tr>
-                                <tr>
-                                    <th class="fs2">.fs2</th>
-                                    <th class="fm2">.fm2</th>
-                                    <th class="fl2">.fl2</th>
-                                </tr>
-                                <tr>
-                                    <th class="fs3">.fs3</th>
-                                    <th class="fm3">.fm3</th>
-                                    <th class="fl3">.fl3</th>
-                                </tr>
-                                <tr>
-                                    <th class="fs4">.fs4</th>
-                                    <th class="fm4">.fm4</th>
-                                    <th class="fl4">.fl4</th>
-                                </tr>
-                                <tr>
-                                    <th class="fs5">.fs5</th>
-                                    <th class="fm5">.fm5</th>
-                                    <th class="fl5">.fl5</th>
-                                </tr>
-                                <tr>
-                                    <th class="fs6">.fs6</th>
-                                    <th class="fm6">.fm6</th>
-                                    <th class="fl6">.fl6</th>
-                                </tr>
-                                <tr>
-                                    <th class="fs7">.fs7</th>
-                                    <th class="fm7">.fm7</th>
-                                    <th class="fl7">.fl7</th>
-                                </tr>
-                                <tr>
-                                    <th class="fs8">.fs8</th>
-                                    <th class="fm8">.fm8</th>
-                                    <th class="fl8">.fl8</th>
-                                </tr>
-                                <tr>
-                                    <th class="fs9">.fs9</th>
-                                    <th class="fm9">.fm9</th>
-                                    <th class="fl9">.fl9</th>
-                                </tr>
-
-                            </table>
-                            <h3 class="example">Font-style</h3>
-                            <div>
-                                <p class="col-1 mb1 fsn borderExample">.fsn</p>
-                                <p class="col-1 mb1 fsi borderExample">.fsi</p>
-                            </div>
-                            <h3 class="example">Text-transform</h3>
-                            <div>
-                                <p class="col-1 mb1 ttu borderExample">.ttu</p>
-                                <p class="col-1 mb1 ttl borderExample">.ttl</p>
-                                <p class="col-1 mb1 ttl borderExample">.ttl</p>
-                                <p class="col-1 mb1 ttn borderExample">.ttn</p>
-                            </div>
-                            <h3 class="example">Text-align</h3>
-                            <div>
-                                <p class="col-1 mb1 tl borderExample">.tl</p>
-                                <p class="col-1 mb1 tr borderExample">.tr</p>
-                                <p class="col-1 mb1 tc borderExample">.tc</p>
-                                <p class="col-1 mb1 tj borderExample">.tj</p>
-                            </div>
-                            <h3 class="example">Text-decoration</h3>
-                            <div>
-                                <p class="col-1 mb1 tdl borderExample">.tdl</p>
-                                <p class="col-1 mb1 tdu borderExample">.tdu</p>
-                                <p class="col-1 mb1 tdn borderExample">.tdn</p>
-                            </div>
-                            <h2 class="example">Getting Started</h2>
-                            <h2 class="example"> Code</h2>
-                            <h3>Font Weight</h3>
-                            <xmp>.fw1 { font-weight: 100; }</xmp>
-                            <xmp>.fw2 { font-weight: 200; }</xmp>
-                            <xmp>.fw3 { font-weight: 300; }</xmp>
-                            <xmp>.fw4 { font-weight: 400; }</xmp>
-                            <xmp>.fw5 { font-weight: 500; }</xmp>
-                            <xmp>.fw6 { font-weight: 600; }</xmp>
-                            <xmp>.fw7 { font-weight: 700; }</xmp>
-                            <xmp>.fw8 { font-weight: 800; }</xmp>
-                            <xmp>.fw9 { font-weight: 900; }</xmp>
-                            <h3>Font-size</h3>
-                            <xmp>.fs1 { font-size: .5em; }</xmp>
-                            <xmp>.fs2 { font-size: .625em; }</xmp>
-                            <xmp>.fs3 { font-size: .75em; }</xmp>
-                            <xmp>.fs4 { font-size: .875em; }</xmp>
-                            <xmp>.fs5 { font-size: 1em; }</xmp>
-                            <xmp>.fs6 { font-size: 1.125em; }</xmp>
-                            <xmp>.fs7 { font-size: 1.25em; }</xmp>
-                            <xmp>.fs8 { font-size: 1.375em; }</xmp>
-                            <xmp>.fs9 { font-size: 1.5em; }</xmp>
-                            <xmp>.fm1 { font-size: 1.625em; }</xmp>
-                            <xmp>.fm2 { font-size: 1.75em; }</xmp>
-                            <xmp>.fm3 { font-size: 1.875em; }</xmp>
-                            <xmp>.fm4 { font-size: 2em; }</xmp>
-                            <xmp>.fm5 { font-size: 2.125em; }</xmp>
-                            <xmp>.fm6 { font-size: 2.25em; }</xmp>
-                            <xmp>.fm7 { font-size: 2.375em; }</xmp>
-                            <xmp>.fm8 { font-size: 2.5em; }</xmp>
-                            <xmp>.fm9 { font-size: 2.625em; }</xmp>
-                            <xmp>.fl1 { font-size: 2.75em; } </xmp>
-                            <xmp>.fl2 { font-size: 2.875em; }</xmp>
-                            <xmp>.fl3 { font-size: 3em; }</xmp>
-                            <xmp>.fl4 { font-size: 3.125em; }</xmp>
-                            <xmp>.fl5 { font-size: 3.25em; }</xmp>
-                            <xmp>.fl6 { font-size: 3.375em; }</xmp>
-                            <xmp>.fl7 { font-size: 3.5em; }</xmp>
-                            <xmp>.fl8 { font-size: 3.625em; }</xmp>
-                            <xmp>.fl9 { font-size: 3.75em; }</xmp>
-                            <h3>Font style</h3>
-                            <xmp>.fsn { font-style: normal; }</xmp>
-                            <xmp>.fsi { font-style: italic; }</xmp>
-                            <h3>Text Transform</h3>
-                            <xmp>.ttu { text-transform: uppercase; }</xmp>
-                            <xmp>.ttl { text-transform: lowercase; }</xmp>
-                            <xmp>.ttc { text-transform: capitalize; }</xmp>
-                            <xmp>.ttn { text-transform: none; }</xmp>
-                            <h3>Text align</h3>
-                            <xmp>.tl { text-align: left; }</xmp>
-                            <xmp>.tr { text-align: right; }</xmp>
-                            <xmp>.tc { text-align: center; }</xmp>
-                            <xmp>.tj { text-align: justify; }</xmp>
-                            <h3>Text decoration</h3>
-                            <xmp>.tdl { text-decoration: line-through; } </xmp>
-                            <xmp> .tdu { text-decoration: underline; }</xmp>
-                            <xmp> .tdn { text-decoration: none; }</xmp>
-                        </div>
+                        <div class="content"></div>
                     </article>
 
                     <article id="z-index" class="main-tabs">

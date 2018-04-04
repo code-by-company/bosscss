@@ -23,11 +23,11 @@ xmp {
     text-align: left;
     float: left;
     display: block;
-    background: #3a4151b4 !important;
+    background: white !important;
     align-items: left;
     all: inherit;
     padding: 30px;
-    color: rgb(90, 167, 168);
+    color: black;
     font-family: monospace;
     font-size: 14px;
     font-style: oblique;
@@ -57,6 +57,19 @@ xmp {
     text-align: center;
 }
 
+.borderColors {
+    display: inline-block;
+    height: 65px;
+    width: 100%;
+    margin: 0 10px 0 0;
+    text-align: center;
+}
+
+.marginsGrid {
+    margin-bottom: 10px;
+    height: 50px;
+}
+
 .textGetting {
     height: 50px;
     text-align: center;
@@ -64,6 +77,8 @@ xmp {
 
 .palletCollor {
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .gridColor {

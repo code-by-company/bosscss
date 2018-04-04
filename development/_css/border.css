@@ -1,79 +1,159 @@
 .bra0 {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 
 .bra2 {
-  border-radius: 2px;
+    border-radius: 2px;
 }
 
 .bra4 {
-  border-radius: 4px;
+    border-radius: 4px;
 }
 
 .bra6 {
-  border-radius: 6px;
+    border-radius: 6px;
 }
 
 .bra8 {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
 .bra10 {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 .bra12 {
-  border-radius: 12px;
+    border-radius: 12px;
 }
 
 .bra16 {
-  border-radius: 16px;
+    border-radius: 16px;
 }
 
 .bra18 {
-  border-radius: 18px;
+    border-radius: 18px;
 }
 
 .bra20 {
-  border-radius: 20px;
+    border-radius: 20px;
 }
 
 .bpra0 {
-  border-radius: 0%;
+    border-radius: 0%;
 }
 
 .bpra5 {
-  border-radius: 5%;
+    border-radius: 5%;
 }
 
 .bpra10 {
-  border-radius: 10%;
+    border-radius: 10%;
 }
 
 .bpra15 {
-  border-radius: 15%;
+    border-radius: 15%;
 }
 
 .bpra20 {
-  border-radius: 20%;
+    border-radius: 20%;
 }
 
 .bpra25 {
-  border-radius: 25%;
+    border-radius: 25%;
 }
 
 .bpra30 {
-  border-radius: 30%;
+    border-radius: 30%;
 }
 
 .bpra40 {
-  border-radius: 40%;
+    border-radius: 40%;
 }
 
 .bpra45 {
-  border-radius: 45%;
+    border-radius: 45%;
 }
 
 .bpra50 {
-  border-radius: 50%;
+    border-radius: 50%;
+}
+
+.brw0 {
+    border-width: 0px;
+}
+
+.brw1 {
+    border-width: 1px;
+}
+
+.brw2 {
+    border-width: 2px;
+}
+
+.brw3 {
+    border-width: 3px;
+}
+
+.brw4 {
+    border-width: 4px;
+}
+
+.brw4 {
+    border-width: 5px;
+}
+
+.bs-dashed {
+    border-style: dashed;
+}
+
+.bs-dotted {
+    border-style: dotted;
+}
+
+.bs-double {
+    border-style: double;
+}
+
+.bs-groove {
+    border-style: groove;
+}
+
+.bs-hidden {
+    border-style: hidden;
+}
+
+.bs-inherit {
+    border-style: inherit;
+}
+
+.bs-initial {
+    border-style: initial;
+}
+
+.bs-inset {
+    border-style: inset;
+}
+
+.bs-none {
+    border-style: none;
+}
+
+.bs-outset {
+    border-style: outset;
+}
+
+.bs-ridge {
+    border-style: ridge;
+}
+
+.bs-solid {
+    border-style: solid;
+}
+
+.bs-unset {
+    border-style: unset;
+}
+
+.bc-black {
+    border-color: black;
 }
