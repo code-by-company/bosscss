@@ -22,3 +22,11 @@ $sides: ( radius );
     }
   }
 }
+
+$borderStyles: (ridge, dashed);
+
+@each $borderStyle in $borderStyles {
+    .bs-#{$borderStyle}{
+      border-style: $borderStyle;
+    }
+}
