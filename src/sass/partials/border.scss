@@ -1,32 +1,33 @@
-$spaceamounts: ( 0, 2, 4, 6, 8, 10, 12, 16, 18, 20 );
-
-$sides: ( radius );
-
+$spaceamounts: ( 0, 2, 4, 6, 8, 10, 12, 16, 18, 20);
+$sides: ( radius);
 @each $space in $spaceamounts {
-  @each $side in $sides {
-    .b#{str-slice($side, 0, 2)}#{$space} {
-      border-#{$side}: #{$space}px;
+    @each $side in $sides {
+        .b#{str-slice($side, 0, 2)}#{$space} {
+            border-#{$side}: #{$space}px;
+        }
     }
-  }
 }
 
-
-$spaceamounts: ( 0, 5, 10, 15, 20, 25, 30, 40, 45, 50 );
-
-$sides: ( radius );
-
+$spaceamounts: ( 0, 5, 10, 15, 20, 25, 30, 40, 45, 50);
+$sides: ( radius);
 @each $space in $spaceamounts {
-  @each $side in $sides {
-    .bp#{str-slice($side, 0, 2)}#{$space} {
-        border-#{$side}: percentage($number: $space / 100 ) ;
+    @each $side in $sides {
+        .bp#{str-slice($side, 0, 2)}#{$space} {
+            border-#{$side}: percentage($number: $space / 100);
+        }
     }
-  }
 }
 
-$borderStyles: (ridge, dashed);
-
+$borderStyles: (dashed, dotted, double, groove, hidden, inherit, initial, inset, none, outset, ridge, solid);
 @each $borderStyle in $borderStyles {
-    .bs-#{$borderStyle}{
-      border-style: $borderStyle;
+    .bs-#{$borderStyle} {
+        border-style: $borderStyle;
+    }
+}
+
+$borderWidhts: (0, 1, 2, 3, 4, 5);
+@each $borderWidht in $borderWidhts {
+    .brw-#{$borderWidht} {
+        border-width: $borderWidht;
     }
 }
