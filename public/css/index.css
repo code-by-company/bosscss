@@ -57,6 +57,15 @@ xmp {
     text-align: center;
 }
 
+.borderText {
+    display: inline-block;
+    height: 65px;
+    line-height: 4;
+    margin: 0px 10px 25px 0;
+    width: 100px;
+    padding: 5px;
+}
+
 .borderColors {
     display: inline-block;
     height: 65px;
@@ -85,11 +94,7 @@ xmp {
     margin-right: 15px;
 }
 
-.overflowStyle {
-    width: 150px;
-    height: 150px;
-    ;
-}
+.overflowStyle {}
 
 .widthOverflow {
     margin: 0 26px 15px 0px;
@@ -108,4 +113,130 @@ xmp {
     display: block;
     overflow: hidden;
     outline: none !important;
+}
+
+.zindexcard {
+    width: 80px;
+    height: 80px;
+}
+
+.ml12 {
+    margin-left: 12rem;
+}
+
+.ml14 {
+    margin-left: 14rem;
+}
+
+.ml16 {
+    margin-left: 16rem;
+}
+
+.ml18 {
+    margin-left: 18rem;
+}
+
+.ml20 {
+    margin-left: 20rem;
+}
+
+.ml22 {
+    margin-left: 22rem;
+}
+
+.ml24 {
+    margin-left: 24rem;
+}
+
+.ml26 {
+    margin-left: 24rem;
+}
+
+.ml26 {
+    margin-left: 26rem;
+}
+
+.ml28 {
+    margin-left: 28rem;
+}
+
+.ml30 {
+    margin-left: 33rem;
+}
+
+.mt11 {
+    margin-top: 11rem;
+}
+
+.mt12 {
+    margin-top: 12rem;
+}
+
+.mt13 {
+    margin-top: 13rem;
+}
+
+.mt14 {
+    margin-top: 14rem;
+}
+
+.mt15 {
+    margin-top: 15rem;
+}
+
+.bs-dashed {
+    border-style: dashed;
+}
+
+.bs-dotted {
+    border-style: dotted;
+}
+
+.bs-double {
+    border-style: double;
+}
+
+.bs-groove {
+    border-style: groove;
+    border-color: aqua;
+}
+
+.bs-hidden {
+    border-style: hidden;
+}
+
+.bs-inherit {
+    border-style: inherit;
+}
+
+.bs-initial {
+    border-style: initial;
+}
+
+.bs-inset {
+    border-style: inset;
+}
+
+.bs-none {
+    border-style: none;
+}
+
+.bs-outset {
+    border-style: outset;
+}
+
+.bs-ridge {
+    border-style: ridge;
+}
+
+.bs-solid {
+    border-style: solid;
+}
+
+.bs-unset {
+    border-style: unset;
+}
+
+.textGrid {
+    margin-top: 0;
 }

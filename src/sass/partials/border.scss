@@ -20,14 +20,14 @@ $sides: ( radius);
 
 $borderStyles: (dashed, dotted, double, groove, hidden, inherit, initial, inset, none, outset, ridge, solid);
 @each $borderStyle in $borderStyles {
-    .bs-#{$borderStyle} {
+    .bs-#{$borderStyles} {
         border-style: $borderStyle;
     }
 }
 
 $borderWidhts: (0, 1, 2, 3, 4, 5);
 @each $borderWidht in $borderWidhts {
-    .brw-#{$borderWidht} {
+    .brw-#{$borderWidhts} {
         border-width: $borderWidht;
     }
 }

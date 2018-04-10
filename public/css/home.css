@@ -1,0 +1,18 @@
+body {
+    background-image: url(../img/background.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.tittle {
+    font-size: 100px;
+    color: white; 
+    margin-top: 190px;
+    text-align:center;
+}
+.sub-tittle {
+    color: white; 
+    margin-top: -77px;
+    text-align:center;
+}
